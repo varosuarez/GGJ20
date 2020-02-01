@@ -18,7 +18,6 @@ public class PickUp : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-
             transform.parent = taker;
             //this.transform.position = GameObject.FindGameObjectWithTag("Player").GetComponent<DinamicPlayer>().carryingPos.position;
         }
