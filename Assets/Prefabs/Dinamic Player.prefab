@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 20
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 6
+  m_GravityScale: 8
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 101614322368874029}
   boxCol: {fileID: 2826278860648534388}
-  acceleration: 1000
+  acceleration: 1500
   maxSpeed: 10
-  jumpStrength: 400
+  jumpStrength: 600
   groundedRaycastDistance: 0.4
   minTimeBetweenJumps: 0.25
 --- !u!61 &2826278860648534388
