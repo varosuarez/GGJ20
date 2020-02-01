@@ -5,6 +5,12 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public enum RayCrossColor
+    {
+        RED = 0,
+        BLUE = 1,
+    }
+
     /// <summary>
 	/// Punto de spawn inicial
 	/// </summary>
