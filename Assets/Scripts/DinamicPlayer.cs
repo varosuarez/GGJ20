@@ -55,6 +55,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private GameObject objectToCatch;
     private bool availableCatch;
 
+    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
+
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
@@ -92,6 +94,19 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         else {
             rb.gravityScale = originalGravity;
             rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
+        }
+
+        // If the input is moving the player right and the player is facing left...
+        if (horizontalInput > 0 && !m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
+        }
+        // Otherwise if the input is moving the player left and the player is facing right...
+        else if (horizontalInput < 0 && m_FacingRight)
+        {
+            // ... flip the player.
+            Flip();
         }
     }
 
@@ -174,6 +189,16 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         return carrying;
     }
 
+    private void Flip()
+    {
+        // Switch the way the player is labelled as facing.
+        m_FacingRight = !m_FacingRight;
+
+        // Multiply the player's x local scale by -1.
+        Vector3 theScale = transform.localScale;
+        theScale.x *= -1;
+        transform.localScale = theScale;
+    }
 
 
 }
