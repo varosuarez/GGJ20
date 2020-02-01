@@ -34,21 +34,25 @@ public class Ray : MonoBehaviour
         {
 
             if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
-                m_Collider.enabled = false;
+                //SiJNoC 
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
             }
             else
             {
-                m_Collider.enabled = true;
+                //NoJNoC              
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("Default");
             }
         }
         else
         {
             if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
-                m_Collider.enabled = true;
+                //NoJSiC
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("Default");
             }
             else
             {
-                m_Collider.enabled = false;
+                //SiJSiC
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("IgnorePlayerAndBox");
             }
         }
 
