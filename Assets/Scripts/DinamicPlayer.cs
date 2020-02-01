@@ -14,6 +14,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         CanClimb,
         CanPhase
     }
+
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
     [Autohook, SerializeField]
@@ -29,9 +30,12 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float groundedRaycastDistance = 0.1f;
     [SerializeField]
     private float minTimeBetweenJumps = 0.25f;
+    [SerializeField]
+    private float additionalDragClimbing = 6;
 
     private InputMaster inputMaster;
-    private float movementInput;
+    private float horizontalInput;
+    private float verticalInput;
     private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
     private int climbableColliders = 0;
@@ -55,9 +59,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         originalGravity = rb.gravityScale;
     }
 
-    public void OnMove(InputAction.CallbackContext ctx) {
-        movementInput = ctx.ReadValue<float>();
-    }
+    public void OnHorizontal(InputAction.CallbackContext ctx) => horizontalInput = ctx.ReadValue<float>();
+
+    public void OnVertical(InputAction.CallbackContext ctx) => verticalInput = ctx.ReadValue<float>();
 
     public void OnJump(InputAction.CallbackContext ctx) {}
 
@@ -67,24 +71,26 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     private void FixedUpdate() {
-        rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
-        Vector2 horizontalDestination = new Vector2(movementInput * acceleration * Time.fixedDeltaTime, 0);
+        Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         Vector2 feet = transform.position;
         feet.y -= boxCol.bounds.extents.y - 0.25f;
         RaycastHit2D groundHit = Physics2D.BoxCast(feet, new Vector2(boxCol.bounds.extents.x - 0.1f, 0.1f), 0, Vector2.down,groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
         Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
         isGrounded = groundHit.collider != null;
-        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump) {
+        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump && !climbing) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
         }
         if (climbing && state >= State.CanClimb) {
             rb.gravityScale = 0;
+            rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed) + additionalDragClimbing;
+            rb.AddForce(Vector2.up * verticalInput * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
         }
         else {
             rb.gravityScale = originalGravity;
+            rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
         }
     }
 
