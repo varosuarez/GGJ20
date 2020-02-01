@@ -4,22 +4,16 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed;
-    bool isMovingRight;
+    public float speed = 1.0f;
     public Transform waypoint1, waypoint2;
     Transform currentPoint;
 
     private void Awake()
     {
-        if(!waypoint1 || !waypoint2)
-        {
-            Debug.LogError("Waypoint is null!");
-        }
+
     }
     private void Update()
     {
-       /* transform.position = Vector2.MoveTowards(transform.position, waypoint1.transform.position, speed * Time.deltaTime);
-
-        transform.position = Vector2.MoveTowards(transform.position, waypoint2.transform.position, speed * Time.deltaTime);*/
+        transform.position = Vector3.Lerp(waypoint1.position, waypoint2.position, (Mathf.Sin(speed * Time.time) + 1.0f) / 2);
     }
 }

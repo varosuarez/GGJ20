@@ -18,8 +18,8 @@ public class DeathPlane : MonoBehaviour
 	/// </param>
 	void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.GetComponent<Death>() != null)  //Si no se comprueba apareceran demasiado warnings
-            other.SendMessage("OnDeath", m_SpawnPoint);
+        if (other.gameObject.GetComponent<Death>() != null && m_SpawnPoint != null)  //Si no se comprueba apareceran demasiado warnings
+            other.SendMessage("OnDeath", m_SpawnPoint.position);
     }
 }
 
