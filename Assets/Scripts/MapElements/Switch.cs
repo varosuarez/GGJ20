@@ -5,7 +5,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public List<Door> doors = new List<Door>();
-    public Sprite isPressed, isNotPressed;
+    public  Sprite isPressed, isNotPressed;
     private bool doorActive = false;
     // Start is called before the first frame update
     void Start()
