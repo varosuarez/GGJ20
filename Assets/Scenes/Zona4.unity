@@ -826,6 +826,16 @@ PrefabInstance:
       propertyPath: state
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5082035387325767932, guid: 53deb8505c83ada40a4c6cfeca776311,
+        type: 3}
+      propertyPath: graceFrames
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5082035387325767932, guid: 53deb8505c83ada40a4c6cfeca776311,
+        type: 3}
+      propertyPath: minTimeBetweenJumps
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 5247827666466247614, guid: 53deb8505c83ada40a4c6cfeca776311,
         type: 3}
       propertyPath: m_LocalPosition.x
