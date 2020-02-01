@@ -67,7 +67,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void SetState(State newState) {
         state = newState;
-        m_BackgroundAudio.SendMessage("ChangeClip", newState);
+        if (m_BackgroundAudio != null) {
+            m_BackgroundAudio.SendMessage("ChangeClip", newState);
+        }
     }
 
     private void FixedUpdate() {
