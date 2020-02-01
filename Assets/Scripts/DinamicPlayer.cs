@@ -53,7 +53,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void OnJump(InputAction.CallbackContext ctx) {}
 
-    public void SetState(State newStart) {}
+    public void SetState(State newState) => state = newState;
 
     private void FixedUpdate() {
         rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
