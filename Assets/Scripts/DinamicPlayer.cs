@@ -61,7 +61,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         Vector2 feet = transform.position;
         feet.y -= boxCol.bounds.extents.y - 0.25f;
-        RaycastHit2D groundHit = Physics2D.Raycast(feet, Vector2.down, groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
+        RaycastHit2D groundHit = Physics2D.BoxCast(feet, new Vector2(boxCol.bounds.extents.x - 0.1f, 0.1f), 0, Vector2.down,groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
         Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
         isGrounded = groundHit.collider != null;
         if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump) {

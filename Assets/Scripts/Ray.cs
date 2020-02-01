@@ -32,7 +32,8 @@ public class Ray : MonoBehaviour
 
         if (red)
         {
-            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()){
+
+            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
                 m_Collider.enabled = false;
             }
             else
@@ -42,7 +43,7 @@ public class Ray : MonoBehaviour
         }
         else
         {
-            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()){
+            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
                 m_Collider.enabled = true;
             }
             else
