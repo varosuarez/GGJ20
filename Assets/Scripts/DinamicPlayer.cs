@@ -18,6 +18,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
 
+    [Autohook, SerializeField]
+    private Animator animator = default;
+
     [SerializeField]
     private float acceleration = 10f;
     [SerializeField]
@@ -81,6 +84,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void FixedUpdate() {
         Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
+        animator.SetFloat("Horizontal", horizontalInput);
         if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump && !climbing) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
