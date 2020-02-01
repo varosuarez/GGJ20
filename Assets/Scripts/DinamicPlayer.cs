@@ -45,11 +45,18 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     private void OnDisable() => inputMaster.Disable();
 
+
+    private bool phase = false;
+    private bool carrying = false;
+    private GameObject objectToCatch;
+    private bool availableCatch;
+
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
         originalGravity = rb.gravityScale;
-    }
+        availableCatch = false;
+}
 
     public void OnMove(InputAction.CallbackContext ctx) {
         movementInput = ctx.ReadValue<float>();
@@ -105,10 +112,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     //     }
     // }
 
-    private bool phase = false;
-    private bool carrying = false;
-    private GameObject objectToCatch = null;
-    private bool availableCatch = false;
+   
 
     public void OnCatch(InputAction.CallbackContext context)
     {
@@ -157,5 +161,12 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         availableCatch = false;
         objectToCatch = null;
     }
+
+    public bool isPlayerCarrying()
+    {
+        return carrying;
+    }
+
+
 
 }
