@@ -1,6 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:Assets/Art/Palette/Atlas_Background_0.asset.meta
 guid: a45e3515520bd56488490834a4ddbb8d
 NativeFormatImporter:
+=======
+guid: b738e6c3aea51944c80c4145edbc0349
+folderAsset: yes
+DefaultImporter:
+>>>>>>> ccf7872a439c0f0b43a1ddf163eb6d0b119f04b0:Assets/Art/Animation/Player.meta
+=======
+guid: f9a2922537f7f7845b5e1b15874fe076
+NativeFormatImporter:
+>>>>>>> ccf7872a439c0f0b43a1ddf163eb6d0b119f04b0
   externalObjects: {}
   mainObjectFileID: 0
   userData: 
