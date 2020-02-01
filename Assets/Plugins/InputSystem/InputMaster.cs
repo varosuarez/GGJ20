@@ -57,6 +57,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftPhase"",
+                    ""type"": ""Button"",
+                    ""id"": ""37feca71-1a35-4e7b-9162-48f525955cc1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -290,6 +298,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Vertical"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""19514e24-7d00-48ce-bf0b-10e7aa5ef62b"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d0d5e6f4-6a73-440e-82e9-363c886cf183"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -331,6 +361,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Catch = m_Player.FindAction("Catch", throwIfNotFound: true);
         m_Player_RightPhase = m_Player.FindAction("RightPhase", throwIfNotFound: true);
         m_Player_Vertical = m_Player.FindAction("Vertical", throwIfNotFound: true);
+        m_Player_LeftPhase = m_Player.FindAction("LeftPhase", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -385,6 +416,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Catch;
     private readonly InputAction m_Player_RightPhase;
     private readonly InputAction m_Player_Vertical;
+    private readonly InputAction m_Player_LeftPhase;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -394,6 +426,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Catch => m_Wrapper.m_Player_Catch;
         public InputAction @RightPhase => m_Wrapper.m_Player_RightPhase;
         public InputAction @Vertical => m_Wrapper.m_Player_Vertical;
+        public InputAction @LeftPhase => m_Wrapper.m_Player_LeftPhase;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -418,6 +451,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Vertical.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVertical;
                 @Vertical.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVertical;
                 @Vertical.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVertical;
+                @LeftPhase.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
+                @LeftPhase.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
+                @LeftPhase.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -437,6 +473,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Vertical.started += instance.OnVertical;
                 @Vertical.performed += instance.OnVertical;
                 @Vertical.canceled += instance.OnVertical;
+                @LeftPhase.started += instance.OnLeftPhase;
+                @LeftPhase.performed += instance.OnLeftPhase;
+                @LeftPhase.canceled += instance.OnLeftPhase;
             }
         }
     }
@@ -466,5 +505,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnCatch(InputAction.CallbackContext context);
         void OnRightPhase(InputAction.CallbackContext context);
         void OnVertical(InputAction.CallbackContext context);
+        void OnLeftPhase(InputAction.CallbackContext context);
     }
 }

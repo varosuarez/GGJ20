@@ -54,6 +54,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
 
     private bool phase = false;
+    private bool canJumpNotGrab = true;
     private bool carrying = false;
     private GameObject objectToCatch;
     private bool availableCatch;
@@ -122,26 +123,27 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             groundColliders--;
         }
     }
-
    
-
     public void OnCatch(InputAction.CallbackContext context)
     {
-        if (carrying)
+        if (!canJumpNotGrab)
         {
-            //DROP
-            objectToCatch.transform.SetParent(null);
-            objectToCatch.AddComponent<Rigidbody2D>();
-            carrying = false;
-        }
-        else
-        {
-            //GRAB
-           if (availableCatch)
+            if (carrying)
             {
-                objectToCatch.transform.SetParent(transform);
-                Destroy(objectToCatch.GetComponent<Rigidbody2D>());
-                carrying = true;
+                //DROP
+                objectToCatch.transform.SetParent(null);
+                objectToCatch.AddComponent<Rigidbody2D>();
+                carrying = false;
+            }
+            else
+            {
+                //GRAB
+                if (availableCatch)
+                {
+                    objectToCatch.transform.SetParent(transform);
+                    Destroy(objectToCatch.GetComponent<Rigidbody2D>());
+                    carrying = true;
+                }
             }
         }
     }
@@ -153,6 +155,23 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             phase = !phase;
         }
+    }
+
+    public void OnLeftPhase(InputAction.CallbackContext context)
+    {
+        if (state == State.CanLoad)
+        {
+            canJumpNotGrab = !canJumpNotGrab;
+
+            if (carrying && objectToCatch != null)
+            {
+                //DROP
+                objectToCatch.transform.SetParent(null);
+                objectToCatch.AddComponent<Rigidbody2D>();
+                carrying = false;
+            }
+        }
+
     }
 
     public bool IsInPhase()
