@@ -7,12 +7,12 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 {
-    private enum State {
+    public enum State {
         Powerless,
         CanJump,
         CanLoad,
         CanClimb,
-        CanRay
+        CanPhase
     }
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
@@ -52,6 +52,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     public void OnJump(InputAction.CallbackContext ctx) {}
+
+    public void SetState(State newStart) {}
 
     private void FixedUpdate() {
         rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
