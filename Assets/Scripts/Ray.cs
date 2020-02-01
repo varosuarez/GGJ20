@@ -36,7 +36,7 @@ public class Ray : MonoBehaviour
             if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
                 //SiJNoC 
                 
-                gameObject.layer = LayerMask.NameToLayer("IgnorePlayerNotBox");
+                gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
             }
             else
             {

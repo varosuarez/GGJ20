@@ -51,7 +51,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
-        m_BackgroundAudio = GameObject.FindGameObjectWithTag("BackgroundAudio");
+        m_BackgroundAudio = GameObject.FindGameObjectWithTag("BackgroundSound");
         originalGravity = rb.gravityScale;
     }
 
