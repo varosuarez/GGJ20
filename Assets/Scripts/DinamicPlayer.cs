@@ -18,6 +18,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
 
+    [Autohook, SerializeField]
+    private Animator animator = default;
+
     [SerializeField]
     private float acceleration = 10f;
     [SerializeField]
@@ -56,7 +59,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool availableCatch;
 
     public Transform carryingPos;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 
     private void Awake() {
         inputMaster = new InputMaster();
@@ -82,7 +84,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void FixedUpdate() {
         Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
-        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump && !climbing) {
+        animator.SetFloat("Horizontal", horizontalInput);
+        if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing)) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
@@ -95,19 +98,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         else {
             rb.gravityScale = originalGravity;
             rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
-        }
-
-        // If the input is moving the player right and the player is facing left...
-        if (horizontalInput > 0 && !m_FacingRight)
-        {
-            // ... flip the player.
-            Flip();
-        }
-        // Otherwise if the input is moving the player left and the player is facing right...
-        else if (horizontalInput < 0 && m_FacingRight)
-        {
-            // ... flip the player.
-            Flip();
         }
     }
 
@@ -188,17 +178,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     public bool isPlayerCarrying()
     {
         return carrying;
-    }
-
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
     }
 
 
