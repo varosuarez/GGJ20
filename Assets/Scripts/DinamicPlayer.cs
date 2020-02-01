@@ -70,4 +70,65 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     //         isGrounded = false;
     //     }
     // }
+
+    private GameManager.Phase phase = GameManager.Phase.RED_RIGHT;
+    private bool carrying = false;
+    private GameObject objectToCatch = null;
+    private bool availableCatch = false;
+
+    public void OnCatch(InputAction.CallbackContext context)
+    {
+        if (carrying)
+        {
+            //DROP
+        }
+        else
+        {
+            //GRAB
+           if (availableCatch)
+            {
+                objectToCatch.transform.SetParent(transform);
+//                objectToCatch.GetComponent<Collider2D>().enabled = false;
+                carrying = true;
+            }
+        }
+    }
+
+
+    public void OnLeftPhase(InputAction.CallbackContext context)
+    {
+        if (phase == GameManager.Phase.RED_RIGHT)
+        {
+            phase = GameManager.Phase.BLUE_LEFT;
+            //TODO: Cambio color
+        }
+    }
+
+    public void OnRightPhase(InputAction.CallbackContext context)
+    {
+        if (phase != GameManager.Phase.RED_RIGHT)
+        {
+            phase = GameManager.Phase.RED_RIGHT;
+            //TODO: Cambio color
+        }
+    }
+
+    public GameManager.Phase GetPhase()
+    {
+        return phase;
+    }
+
+    public void EnableCatch(GameObject objeto)
+    {
+        availableCatch = true;
+        objectToCatch = objeto;
+
+    }
+
+    public void DisableCatch()
+    {
+        availableCatch = false;
+        objectToCatch = null;
+    }
+
 }
