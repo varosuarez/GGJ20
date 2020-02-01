@@ -5,10 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public enum RayCrossColor
+    public enum Phase
     {
-        RED = 0,
-        BLUE = 1,
+        RED_RIGHT = 0,
+        BLUE_LEFT = 1,
     }
 
     /// <summary>
