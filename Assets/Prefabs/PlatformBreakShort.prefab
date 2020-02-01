@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3501173840633292331}
   m_Layer: 0
-  m_Name: PlatformBreak
+  m_Name: PlatformBreakShort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8256752657713353119}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.455, y: -0.043, z: 17.24309}
+  m_LocalPosition: {x: 0.453, y: -0.043, z: 17.24309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3501173840633292331}
@@ -184,7 +184,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8204700181737949635, guid: bbb4ee458fef4a04b9425acfb05df90f,
+  m_Sprite: {fileID: 1518281317282480672, guid: bbb4ee458fef4a04b9425acfb05df90f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
