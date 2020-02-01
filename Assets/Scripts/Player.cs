@@ -16,7 +16,7 @@ public class Player : MonoBehaviour, InputMaster.IPlayerActions
     private GameManager.RayCrossColor m_RayColor = GameManager.RayCrossColor.RED;
 
     private InputMaster inputMaster;
-    private Vector2 movementInput;
+    private float movementInput;
 
     private void OnEnable() => inputMaster.Enable();
 
@@ -28,11 +28,13 @@ public class Player : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     public void OnMove(InputAction.CallbackContext ctx) {
-        movementInput = ctx.ReadValue<Vector2>();
+        movementInput = ctx.ReadValue<float>();
     }
 
+    public void OnJump(InputAction.CallbackContext ctx) {}
+
     private void FixedUpdate() {
-        Vector3 destination = movementInput * speed;
+        Vector3 destination = new Vector2(movementInput * speed, 0);
         rb.MovePosition(transform.position + destination * Time.fixedDeltaTime);
     }
 
