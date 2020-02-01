@@ -59,6 +59,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private GameObject objectToCatch;
     private bool availableCatch;
 
+    public Transform carryingPos;
+
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);

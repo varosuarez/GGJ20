@@ -25,4 +25,5 @@ public class Catchable : MonoBehaviour
             other.SendMessage("DisableCatch");
     }
 
+
 }
