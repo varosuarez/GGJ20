@@ -17,8 +17,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
-    [Autohook, SerializeField]
-    private BoxCollider2D boxCol = default;
 
     [SerializeField]
     private float acceleration = 10f;
@@ -26,8 +24,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float maxSpeed = 10f;
     [SerializeField]
     private float jumpStrength = 5;
-    [SerializeField]
-    private float groundedRaycastDistance = 0.1f;
     [SerializeField]
     private float minTimeBetweenJumps = 0.25f;
     [SerializeField]
