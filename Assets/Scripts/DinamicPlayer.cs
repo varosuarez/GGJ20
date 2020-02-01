@@ -34,6 +34,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float movementInput;
     private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
+    private int climbableColliders = 0;
+    private bool climbing => climbableColliders > 0;
+    private float originalGravity;
 
     [SerializeField]
     private State state = State.Powerless;
@@ -45,6 +48,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
+        originalGravity = rb.gravityScale;
     }
 
     public void OnMove(InputAction.CallbackContext ctx) {
@@ -68,6 +72,24 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
+        }
+        if (climbing && state >= State.CanClimb) {
+            rb.gravityScale = 0;
+        }
+        else {
+            rb.gravityScale = originalGravity;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D col) {
+        if (col.CompareTag("Climbable")) {
+            climbableColliders++;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D col) {
+        if (col.CompareTag("Climbable")) {
+            climbableColliders--;
         }
     }
 
