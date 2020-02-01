@@ -691,6 +691,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerUp_Climb
       objectReference: {fileID: 0}
+    - target: {fileID: 5128156968488834622, guid: 30753548f5c69dd4f8c08ccf699d1c7f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6525238268429384374, guid: 30753548f5c69dd4f8c08ccf699d1c7f,
         type: 3}
       propertyPath: m_LocalPosition.x

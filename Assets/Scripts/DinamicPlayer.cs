@@ -36,10 +36,11 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private InputMaster inputMaster;
     private float horizontalInput;
     private float verticalInput;
-    private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
     private int climbableColliders = 0;
+    private int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
+    private bool isGrounded => groundColliders > 0;
     private float originalGravity;
 
     private GameObject m_BackgroundAudio;
@@ -82,11 +83,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void FixedUpdate() {
         Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
-        Vector2 feet = transform.position;
-        feet.y -= boxCol.bounds.extents.y - 0.25f;
-        RaycastHit2D groundHit = Physics2D.BoxCast(feet, new Vector2(boxCol.bounds.extents.x - 0.1f, 0.1f), 0, Vector2.down,groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
-        Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
-        isGrounded = groundHit.collider != null;
         if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump && !climbing) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
@@ -115,17 +111,17 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    // private void OnCollisionEnter2D(Collision2D col) {
-    //     if (col.collider.CompareTag("Feet") && col.otherCollider.CompareTag("Floor")) {
-    //         isGrounded = true;
-    //     }
-    // }
+    private void OnCollisionEnter2D(Collision2D col) {
+        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
+            groundColliders++;
+        }
+    }
 
-    // private void OnCollisionExit2D(Collision2D col) {
-    //     if (col.collider.CompareTag("Feet") && col.otherCollider.CompareTag("Floor")) {
-    //         isGrounded = false;
-    //     }
-    // }
+    private void OnCollisionExit2D(Collision2D col) {
+        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
+            groundColliders--;
+        }
+    }
 
    
 
