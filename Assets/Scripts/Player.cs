@@ -13,6 +13,8 @@ public class Player : MonoBehaviour, InputMaster.IPlayerActions
     [SerializeField]
     private float speed = 10f;
 
+    private GameManager.RayCrossColor m_RayColor = GameManager.RayCrossColor.RED;
+
     private InputMaster inputMaster;
     private Vector2 movementInput;
 
@@ -32,5 +34,10 @@ public class Player : MonoBehaviour, InputMaster.IPlayerActions
     private void FixedUpdate() {
         Vector3 destination = movementInput * speed;
         rb.MovePosition(transform.position + destination * Time.fixedDeltaTime);
+    }
+
+    public GameManager.RayCrossColor GetRayColor()
+    {
+       return m_RayColor;
     }
 }
