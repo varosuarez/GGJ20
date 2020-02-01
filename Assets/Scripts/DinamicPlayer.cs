@@ -31,16 +31,19 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float minTimeBetweenJumps = 0.25f;
     [SerializeField]
     private float additionalDragClimbing = 6;
+    public int graceFrames = 5;
 
     private InputMaster inputMaster;
     private float horizontalInput;
     private float verticalInput;
     private bool minTimeBetweenJumpsHasPassed = true;
     private int climbableColliders = 0;
-    private int groundColliders = 0;
+    [HideInInspector]
+    public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
     private bool isGrounded => groundColliders > 0;
     private float originalGravity;
+    public int graceFramesRemaining = 0;
 
     private GameObject m_BackgroundAudio;
 
@@ -87,7 +90,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         animator.SetFloat("Horizontal", horizontalInput);
-        if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing)) {
+        if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
@@ -101,6 +104,10 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             rb.gravityScale = originalGravity;
             rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
         }
+        if (graceFramesRemaining > 0) {
+            graceFramesRemaining--;
+        }
+        animator.SetBool("IsClimbing", climbing);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
@@ -118,15 +125,24 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void OnCollisionEnter2D(Collision2D col) {
         if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
             groundColliders++;
+            graceFramesRemaining = graceFrames;
+        }
+    }
+    
+
+    private void OnCollisionStay2D(Collision2D col) {
+        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
+            graceFramesRemaining = graceFrames;
         }
     }
 
     private void OnCollisionExit2D(Collision2D col) {
         if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
             groundColliders--;
+            graceFramesRemaining = graceFrames;
         }
     }
-   
+
     public void OnCatch(InputAction.CallbackContext context)
     {
         if (!canJumpNotGrab)
