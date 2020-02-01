@@ -5,7 +5,7 @@ using UnityEngine;
 public class Ray : MonoBehaviour
 {
 
-    public GameManager.Phase m_RayColor = GameManager.Phase.RED_RIGHT;
+    public bool red = false;
     private Collider2D m_Collider = null;
 
     // Start is called before the first frame update
@@ -30,13 +30,27 @@ public class Ray : MonoBehaviour
             return;
         }
 
-        if (m_RayColor == other.gameObject.GetComponent<DinamicPlayer>().GetPhase())
+        if (red)
         {
-            m_Collider.enabled = false;
+            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase(){
+                m_Collider.enabled = false;
+            }
+            else
+            {
+                m_Collider.enabled = true;
+            }
         }
-        else {
-            m_Collider.enabled = true;
+        else
+        {
+            if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase(){
+                m_Collider.enabled = true;
+            }
+            else
+            {
+                m_Collider.enabled = false;
+            }
         }
+
     }
 
 }

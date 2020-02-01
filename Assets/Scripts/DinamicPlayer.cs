@@ -83,7 +83,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     //     }
     // }
 
-    private GameManager.Phase phase = GameManager.Phase.RED_RIGHT;
+    private bool phase = false;
     private bool carrying = false;
     private GameObject objectToCatch = null;
     private bool availableCatch = false;
@@ -93,6 +93,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (carrying)
         {
             //DROP
+            objectToCatch.transform.SetParent(null);
+            objectToCatch.AddComponent<Rigidbody2D>();
+            carrying = false;
         }
         else
         {
@@ -100,32 +103,22 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
            if (availableCatch)
             {
                 objectToCatch.transform.SetParent(transform);
-//                objectToCatch.GetComponent<Collider2D>().enabled = false;
+                Destroy(objectToCatch.GetComponent<Rigidbody2D>());
                 carrying = true;
             }
         }
     }
 
 
-    public void OnLeftPhase(InputAction.CallbackContext context)
-    {
-        if (phase == GameManager.Phase.RED_RIGHT)
-        {
-            phase = GameManager.Phase.BLUE_LEFT;
-            //TODO: Cambio color
-        }
-    }
-
     public void OnRightPhase(InputAction.CallbackContext context)
     {
-        if (phase != GameManager.Phase.RED_RIGHT)
+        if (state == State.CanPhase)
         {
-            phase = GameManager.Phase.RED_RIGHT;
-            //TODO: Cambio color
+            phase = !phase;
         }
     }
 
-    public GameManager.Phase GetPhase()
+    public bool IsInPhase()
     {
         return phase;
     }
