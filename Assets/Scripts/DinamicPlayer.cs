@@ -36,11 +36,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         movementInput = ctx.ReadValue<float>();
     }
 
-    public void OnJump(InputAction.CallbackContext ctx) {
-        // if (isGrounded && ctx.ReadValue) {
-        //     rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
-        // }
-    }
+    public void OnJump(InputAction.CallbackContext ctx) {}
 
     private void FixedUpdate() {
         rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
