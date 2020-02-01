@@ -109,10 +109,10 @@ TextureImporter:
     second: laser_down
   - first:
       213: 5882834879317868331
-    second: Atlas_Tiles_35
+    second: fence_end-2
   - first:
       213: -2606090263650578532
-    second: Atlas_Tiles_36
+    second: fence_end-1
   - first:
       213: 6995041430291189647
     second: beam-1
@@ -175,7 +175,7 @@ TextureImporter:
     second: door_green
   - first:
       213: 7238577720310134545
-    second: Atlas_Tiles_21
+    second: dirt-15
   - first:
       213: -7032850935377354067
     second: beam_break-1
@@ -253,7 +253,7 @@ TextureImporter:
     second: door_green
   - first:
       213: -374692631347485824
-    second: Atlas_Tiles_22
+    second: dirt-16
   - first:
       213: -1189714256460256139
     second: button_green
@@ -274,7 +274,7 @@ TextureImporter:
     second: Atlas_Tiles_28
   - first:
       213: 5761300022509434119
-    second: Atlas_Tiles_29
+    second: dirt-25
   - first:
       213: -5769651177837474536
     second: long_beam_break-1
@@ -313,7 +313,7 @@ TextureImporter:
     second: power_up-4
   - first:
       213: -6666943066546725473
-    second: Atlas_Tiles_42
+    second: fence-2
   - first:
       213: -5114762848711330585
     second: door
@@ -409,7 +409,7 @@ TextureImporter:
     second: laser_blue
   - first:
       213: 6079996578024048704
-    second: Atlas_Tiles_27
+    second: laser_blue
   - first:
       213: -3369080267062834468
     second: long_beam_break-1
@@ -424,7 +424,7 @@ TextureImporter:
     second: laser_up
   - first:
       213: 4167654433822616364
-    second: Atlas_Tiles_34
+    second: fence_end-1
   - first:
       213: 6995041430291189647
     second: beam-1
@@ -439,10 +439,10 @@ TextureImporter:
     second: laser_down
   - first:
       213: 7773001370988504455
-    second: Atlas_Tiles_41
+    second: fence-1
   - first:
       213: -5114762848711330585
-    second: Atlas_Tiles_43
+    second: fence-1
   - first:
       213: 4283334122463301547
     second: floor-21
@@ -455,6 +455,171 @@ TextureImporter:
   - first:
       213: -8642358084849157517
     second: dirt-25
+  - first:
+      213: -913810745074246122
+    second: power_up-1
+  - first:
+      213: -7758181329018315254
+    second: power_up-2
+  - first:
+      213: 115444224346548606
+    second: power_up-3
+  - first:
+      213: -4939603582289803298
+    second: power_up-4
+  - first:
+      213: 7290475436417699467
+    second: dirt-11
+  - first:
+      213: -3692455514678178937
+    second: dirt-12
+  - first:
+      213: -1589608069536172443
+    second: dirt-13
+  - first:
+      213: 1343953158640016272
+    second: dirt-14
+  - first:
+      213: -3399448115334156435
+    second: box
+  - first:
+      213: 6235958373266802153
+    second: water-11
+  - first:
+      213: 1986734609318750484
+    second: water-12
+  - first:
+      213: -8691216827079191663
+    second: chain
+  - first:
+      213: 281239084752438193
+    second: dirt-21
+  - first:
+      213: -8810828880842732622
+    second: dirt-22
+  - first:
+      213: 5829739310254992484
+    second: dirt-23
+  - first:
+      213: 5283931374694829722
+    second: dirt-24
+  - first:
+      213: -3972755650674279929
+    second: button_red
+  - first:
+      213: 8790794649253671267
+    second: water-21
+  - first:
+      213: -5219350790377368147
+    second: water-22
+  - first:
+      213: -4352766603234922705
+    second: laser_red
+  - first:
+      213: 1518281317282480672
+    second: door-1
+  - first:
+      213: -8307255340159117534
+    second: button_green
+  - first:
+      213: -3958609426143284016
+    second: beam_break-1
+  - first:
+      213: 392433462347695478
+    second: beam_break-2
+  - first:
+      213: -3369080267062834468
+    second: dirt-26
+  - first:
+      213: -210760969299435636
+    second: door-2
+  - first:
+      213: 7189791094389244177
+    second: long_beam_break-1
+  - first:
+      213: 4900042601032664269
+    second: long_beam_break-2
+  - first:
+      213: 4167654433822616364
+    second: long_beam_break-3
+  - first:
+      213: 5882834879317868331
+    second: laser_up
+  - first:
+      213: 6995041430291189647
+    second: fence_end-2
+  - first:
+      213: -1165203275220731755
+    second: door-3
+  - first:
+      213: -3268174673106457936
+    second: beam-1
+  - first:
+      213: 8091521538327777954
+    second: beam-2
+  - first:
+      213: 7773001370988504455
+    second: beam-3
+  - first:
+      213: -6666943066546725473
+    second: laser_down
+  - first:
+      213: 3541983490941636505
+    second: fence-2
+  - first:
+      213: 2112085971847176675
+    second: Atlas_Tiles_45
+  - first:
+      213: -743448913353603014
+    second: door-4
+  - first:
+      213: -4194361740036235119
+    second: floor-11
+  - first:
+      213: -5017778968624111993
+    second: floor-12
+  - first:
+      213: 5345363616064757710
+    second: floor-13
+  - first:
+      213: 4283334122463301547
+    second: floor-14
+  - first:
+      213: -6254301073792509174
+    second: floor-15
+  - first:
+      213: -2444160724799376275
+    second: floor-16
+  - first:
+      213: 4337211832160887304
+    second: floor-17
+  - first:
+      213: -1468907594581668203
+    second: floor-18
+  - first:
+      213: -2381782560236828344
+    second: floor-21
+  - first:
+      213: -8642358084849157517
+    second: floor-22
+  - first:
+      213: 7203115017962613551
+    second: floor-23
+  - first:
+      213: -6248533012776195129
+    second: floor-24
+  - first:
+      213: -8377263907810491417
+    second: floor-25
+  - first:
+      213: 4072830340971041916
+    second: floor-26
+  - first:
+      213: -152371372818021041
+    second: dirt-27
+  - first:
+      213: 8582167880856925723
+    second: dirt-28
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -637,8 +802,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66198d06bd5ddfe80800000000000000
-      internalID: -8143117413016628890
+      spriteID: b8e436768c8fc2560800000000000000
+      internalID: 7290475436417699467
       vertices: []
       indices: 
       edges: []
@@ -686,7 +851,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt-15
+      name: dirt-14
       rect:
         serializedVersion: 2
         x: 1792
@@ -742,8 +907,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d69ea5bb3a38cd040800000000000000
-      internalID: 4673755252549937517
+      spriteID: 9e5c0b8d9139a8650800000000000000
+      internalID: 6235958373266802153
       vertices: []
       indices: 
       edges: []
@@ -763,8 +928,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d0ec9e18a1766520800000000000000
-      internalID: 2694966393909862617
+      spriteID: 4192b6bd99c429b10800000000000000
+      internalID: 1986734609318750484
       vertices: []
       indices: 
       edges: []
@@ -868,8 +1033,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83c450c4c04c2aa70800000000000000
-      internalID: 8836840975948401720
+      spriteID: a9e0a3ef69b445940800000000000000
+      internalID: 5283931374694829722
       vertices: []
       indices: 
       edges: []
@@ -980,7 +1145,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_21
+      name: dirt-15
       rect:
         serializedVersion: 2
         x: 1280
@@ -1001,7 +1166,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_22
+      name: dirt-16
       rect:
         serializedVersion: 2
         x: 1536
@@ -1022,6 +1187,27 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: door-1
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1280
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0220cb950d4021510800000000000000
+      internalID: 1518281317282480672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: button_green
       rect:
         serializedVersion: 2
@@ -1036,8 +1222,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0220cb950d4021510800000000000000
-      internalID: 1518281317282480672
+      spriteID: 22759572843b6bc80800000000000000
+      internalID: -8307255340159117534
       vertices: []
       indices: 
       edges: []
@@ -1057,8 +1243,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22759572843b6bc80800000000000000
-      internalID: -8307255340159117534
+      spriteID: 0d4773653b13019c0800000000000000
+      internalID: -3958609426143284016
       vertices: []
       indices: 
       edges: []
@@ -1078,8 +1264,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d4773653b13019c0800000000000000
-      internalID: -3958609426143284016
+      spriteID: 6750631a724327500800000000000000
+      internalID: 392433462347695478
       vertices: []
       indices: 
       edges: []
@@ -1089,27 +1275,6 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 768
-        y: 1024
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6750631a724327500800000000000000
-      internalID: 392433462347695478
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Atlas_Tiles_27
-      rect:
-        serializedVersion: 2
-        x: 1024
         y: 1024
         width: 256
         height: 256
@@ -1130,7 +1295,7 @@ TextureImporter:
       name: Atlas_Tiles_28
       rect:
         serializedVersion: 2
-        x: 1280
+        x: 1024
         y: 1024
         width: 256
         height: 256
@@ -1148,7 +1313,28 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_29
+      name: dirt-25
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705ff1688df34ff40800000000000000
+      internalID: 5761300022509434119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dirt-26
       rect:
         serializedVersion: 2
         x: 1536
@@ -1162,8 +1348,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 705ff1688df34ff40800000000000000
-      internalID: 5761300022509434119
+      spriteID: cda01f5e85f9e31d0800000000000000
+      internalID: -3369080267062834468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: door-2
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1024
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8fd36cd30a331df0800000000000000
+      internalID: -210760969299435636
       vertices: []
       indices: 
       edges: []
@@ -1183,8 +1390,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cda01f5e85f9e31d0800000000000000
-      internalID: -3369080267062834468
+      spriteID: 111865e38e447c360800000000000000
+      internalID: 7189791094389244177
       vertices: []
       indices: 
       edges: []
@@ -1204,8 +1411,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8fd36cd30a331df0800000000000000
-      internalID: -210760969299435636
+      spriteID: dc445dab8c2700440800000000000000
+      internalID: 4900042601032664269
       vertices: []
       indices: 
       edges: []
@@ -1225,8 +1432,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 111865e38e447c360800000000000000
-      internalID: 7189791094389244177
+      spriteID: c2b249a50ab76d930800000000000000
+      internalID: 4167654433822616364
       vertices: []
       indices: 
       edges: []
@@ -1246,14 +1453,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc445dab8c2700440800000000000000
-      internalID: 4900042601032664269
+      spriteID: b2ff406772704a150800000000000000
+      internalID: 5882834879317868331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_34
+      name: fence_end-1
       rect:
         serializedVersion: 2
         x: 1024
@@ -1267,14 +1474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2b249a50ab76d930800000000000000
-      internalID: 4167654433822616364
+      spriteID: c9fc08e76be45dbd0800000000000000
+      internalID: -2606090263650578532
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_35
+      name: fence_end-2
       rect:
         serializedVersion: 2
         x: 1280
@@ -1288,17 +1495,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2ff406772704a150800000000000000
-      internalID: 5882834879317868331
+      spriteID: f8f85a99e11631160800000000000000
+      internalID: 6995041430291189647
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_36
+      name: door-3
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1792
         y: 768
         width: 256
         height: 256
@@ -1309,8 +1516,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9fc08e76be45dbd0800000000000000
-      internalID: -2606090263650578532
+      spriteID: 598b8517bcd54dfe0800000000000000
+      internalID: -1165203275220731755
       vertices: []
       indices: 
       edges: []
@@ -1330,8 +1537,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8f85a99e11631160800000000000000
-      internalID: 6995041430291189647
+      spriteID: 0baaf89437c15a2d0800000000000000
+      internalID: -3268174673106457936
       vertices: []
       indices: 
       edges: []
@@ -1351,8 +1558,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 598b8517bcd54dfe0800000000000000
-      internalID: -1165203275220731755
+      spriteID: 2a21378e7fbda4070800000000000000
+      internalID: 8091521538327777954
       vertices: []
       indices: 
       edges: []
@@ -1361,7 +1568,7 @@ TextureImporter:
       name: beam-3
       rect:
         serializedVersion: 2
-        x: 512
+        x: 515
         y: 512
         width: 256
         height: 256
@@ -1372,8 +1579,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0baaf89437c15a2d0800000000000000
-      internalID: -3268174673106457936
+      spriteID: 785e464509f3fdb60800000000000000
+      internalID: 7773001370988504455
       vertices: []
       indices: 
       edges: []
@@ -1393,14 +1600,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a21378e7fbda4070800000000000000
-      internalID: 8091521538327777954
+      spriteID: f9d9abc9a924a73a0800000000000000
+      internalID: -6666943066546725473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_41
+      name: fence-1
       rect:
         serializedVersion: 2
         x: 1024
@@ -1414,14 +1621,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 785e464509f3fdb60800000000000000
-      internalID: 7773001370988504455
+      spriteID: 7e4323cc946b409b0800000000000000
+      internalID: -5114762848711330585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_42
+      name: fence-2
       rect:
         serializedVersion: 2
         x: 1280
@@ -1429,35 +1636,35 @@ TextureImporter:
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9d9abc9a924a73a0800000000000000
-      internalID: -6666943066546725473
+      spriteID: 99fcfd10837a72130800000000000000
+      internalID: 3541983490941636505
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Atlas_Tiles_43
+      name: door-4
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1792
         y: 512
         width: 256
         height: 256
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e4323cc946b409b0800000000000000
-      internalID: -5114762848711330585
+      spriteID: a3888eaf62dbea5f0800000000000000
+      internalID: -743448913353603014
       vertices: []
       indices: 
       edges: []
@@ -1477,8 +1684,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99fcfd10837a72130800000000000000
-      internalID: 3541983490941636505
+      spriteID: 190a6a95832aac5c0800000000000000
+      internalID: -4194361740036235119
       vertices: []
       indices: 
       edges: []
@@ -1498,8 +1705,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e169074003af4d10800000000000000
-      internalID: 2112085971847176675
+      spriteID: 78edbb50d944d5ab0800000000000000
+      internalID: -5017778968624111993
       vertices: []
       indices: 
       edges: []
@@ -1519,8 +1726,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3888eaf62dbea5f0800000000000000
-      internalID: -743448913353603014
+      spriteID: ecf56da43eb8e2a40800000000000000
+      internalID: 5345363616064757710
       vertices: []
       indices: 
       edges: []
@@ -1540,8 +1747,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190a6a95832aac5c0800000000000000
-      internalID: -4194361740036235119
+      spriteID: baf0cb7b0b5717b30800000000000000
+      internalID: 4283334122463301547
       vertices: []
       indices: 
       edges: []
@@ -1561,8 +1768,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78edbb50d944d5ab0800000000000000
-      internalID: -5017778968624111993
+      spriteID: a0bd0426f424439a0800000000000000
+      internalID: -6254301073792509174
       vertices: []
       indices: 
       edges: []
@@ -1582,8 +1789,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ecf56da43eb8e2a40800000000000000
-      internalID: 5345363616064757710
+      spriteID: d643f5045c8941ed0800000000000000
+      internalID: -2444160724799376275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor-17
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802229b8e2fd03c30800000000000000
+      internalID: 4337211832160887304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: floor-18
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59e061943546d9be0800000000000000
+      internalID: -1468907594581668203
       vertices: []
       indices: 
       edges: []
@@ -1603,8 +1852,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baf0cb7b0b5717b30800000000000000
-      internalID: 4283334122463301547
+      spriteID: 8490dd4716532fed0800000000000000
+      internalID: -2381782560236828344
       vertices: []
       indices: 
       edges: []
@@ -1624,8 +1873,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0bd0426f424439a0800000000000000
-      internalID: -6254301073792509174
+      spriteID: 37a37da6c1d201880800000000000000
+      internalID: -8642358084849157517
       vertices: []
       indices: 
       edges: []
@@ -1645,8 +1894,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d643f5045c8941ed0800000000000000
-      internalID: -2444160724799376275
+      spriteID: f2b61f1f1fa96f360800000000000000
+      internalID: 7203115017962613551
       vertices: []
       indices: 
       edges: []
@@ -1666,8 +1915,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 802229b8e2fd03c30800000000000000
-      internalID: 4337211832160887304
+      spriteID: 7cb6c2eb450c849a0800000000000000
+      internalID: -6248533012776195129
       vertices: []
       indices: 
       edges: []
@@ -1687,8 +1936,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59e061943546d9be0800000000000000
-      internalID: -1468907594581668203
+      spriteID: 7e341494cdafdbb80800000000000000
+      internalID: -8377263907810491417
       vertices: []
       indices: 
       edges: []
@@ -1708,14 +1957,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8490dd4716532fed0800000000000000
-      internalID: -2381782560236828344
+      spriteID: c741308cd99958830800000000000000
+      internalID: 4072830340971041916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt-25
+      name: dirt-27
       rect:
         serializedVersion: 2
         x: 1536
@@ -1729,14 +1978,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37a37da6c1d201880800000000000000
-      internalID: -8642358084849157517
+      spriteID: f454e313b0ba2edf0800000000000000
+      internalID: -152371372818021041
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt-26
+      name: dirt-28
       rect:
         serializedVersion: 2
         x: 1792
@@ -1750,8 +1999,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2b61f1f1fa96f360800000000000000
-      internalID: 7203115017962613551
+      spriteID: b167e35a73cf91770800000000000000
+      internalID: 8582167880856925723
       vertices: []
       indices: 
       edges: []

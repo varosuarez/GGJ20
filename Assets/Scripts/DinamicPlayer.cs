@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 {
+    public enum State {
+        Powerless,
+        CanJump,
+        CanLoad,
+        CanClimb,
+        CanPhase
+    }
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
     [Autohook, SerializeField]
@@ -28,6 +35,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
 
+    [SerializeField]
+    private State state = State.Powerless;
+
     private void OnEnable() => inputMaster.Enable();
 
     private void OnDisable() => inputMaster.Disable();
@@ -43,6 +53,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void OnJump(InputAction.CallbackContext ctx) {}
 
+    public void SetState(State newState) => state = newState;
+
     private void FixedUpdate() {
         rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
         Vector2 horizontalDestination = new Vector2(movementInput * acceleration * Time.fixedDeltaTime, 0);
@@ -52,7 +64,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         RaycastHit2D groundHit = Physics2D.Raycast(feet, Vector2.down, groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
         Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
         isGrounded = groundHit.collider != null;
-        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed) {
+        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
@@ -70,4 +82,65 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     //         isGrounded = false;
     //     }
     // }
+
+    private GameManager.Phase phase = GameManager.Phase.RED_RIGHT;
+    private bool carrying = false;
+    private GameObject objectToCatch = null;
+    private bool availableCatch = false;
+
+    public void OnCatch(InputAction.CallbackContext context)
+    {
+        if (carrying)
+        {
+            //DROP
+        }
+        else
+        {
+            //GRAB
+           if (availableCatch)
+            {
+                objectToCatch.transform.SetParent(transform);
+//                objectToCatch.GetComponent<Collider2D>().enabled = false;
+                carrying = true;
+            }
+        }
+    }
+
+
+    public void OnLeftPhase(InputAction.CallbackContext context)
+    {
+        if (phase == GameManager.Phase.RED_RIGHT)
+        {
+            phase = GameManager.Phase.BLUE_LEFT;
+            //TODO: Cambio color
+        }
+    }
+
+    public void OnRightPhase(InputAction.CallbackContext context)
+    {
+        if (phase != GameManager.Phase.RED_RIGHT)
+        {
+            phase = GameManager.Phase.RED_RIGHT;
+            //TODO: Cambio color
+        }
+    }
+
+    public GameManager.Phase GetPhase()
+    {
+        return phase;
+    }
+
+    public void EnableCatch(GameObject objeto)
+    {
+        availableCatch = true;
+        objectToCatch = objeto;
+
+    }
+
+    public void DisableCatch()
+    {
+        availableCatch = false;
+        objectToCatch = null;
+    }
+
 }

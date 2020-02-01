@@ -33,6 +33,30 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Catch"",
+                    ""type"": ""Button"",
+                    ""id"": ""ed3743d7-98ab-42bd-a886-beb8a413b818"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""RightPhase"",
+                    ""type"": ""Button"",
+                    ""id"": ""35d29f67-b0aa-4402-8aec-91cbf3979374"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""LeftPhase"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f2300a0-617b-432d-8d9b-1e9f13ccb371"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -145,6 +169,72 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cc7648f0-870f-4fcb-b820-a2c8b11165af"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d289db15-cb78-4e3f-8c75-99c7cf8ca20f"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Catch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa0993ba-3ab4-4a4c-b536-ecd529a53fe2"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""14883e8a-77f8-4efd-b38f-17c526cf658b"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""RightPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c16e0da3-b184-4f7d-b77a-5ec9b04fb7d0"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ae9dfaf-28de-4f33-b67e-f952c22f0c64"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LeftPhase"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -183,6 +273,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
+        m_Player_Catch = m_Player.FindAction("Catch", throwIfNotFound: true);
+        m_Player_RightPhase = m_Player.FindAction("RightPhase", throwIfNotFound: true);
+        m_Player_LeftPhase = m_Player.FindAction("LeftPhase", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -234,12 +327,18 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Jump;
+    private readonly InputAction m_Player_Catch;
+    private readonly InputAction m_Player_RightPhase;
+    private readonly InputAction m_Player_LeftPhase;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
         public PlayerActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
+        public InputAction @Catch => m_Wrapper.m_Player_Catch;
+        public InputAction @RightPhase => m_Wrapper.m_Player_RightPhase;
+        public InputAction @LeftPhase => m_Wrapper.m_Player_LeftPhase;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -255,6 +354,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                @Catch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCatch;
+                @Catch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCatch;
+                @Catch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCatch;
+                @RightPhase.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
+                @RightPhase.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
+                @RightPhase.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
+                @LeftPhase.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
+                @LeftPhase.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
+                @LeftPhase.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -265,6 +373,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Catch.started += instance.OnCatch;
+                @Catch.performed += instance.OnCatch;
+                @Catch.canceled += instance.OnCatch;
+                @RightPhase.started += instance.OnRightPhase;
+                @RightPhase.performed += instance.OnRightPhase;
+                @RightPhase.canceled += instance.OnRightPhase;
+                @LeftPhase.started += instance.OnLeftPhase;
+                @LeftPhase.performed += instance.OnLeftPhase;
+                @LeftPhase.canceled += instance.OnLeftPhase;
             }
         }
     }
@@ -291,5 +408,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnCatch(InputAction.CallbackContext context);
+        void OnRightPhase(InputAction.CallbackContext context);
+        void OnLeftPhase(InputAction.CallbackContext context);
     }
 }
