@@ -515,7 +515,7 @@ TextureImporter:
       name: water-11
       rect:
         serializedVersion: 2
-        x: 256
+        x: 255
         y: 1536
         width: 256
         height: 256

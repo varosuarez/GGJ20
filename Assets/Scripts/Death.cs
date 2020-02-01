@@ -17,8 +17,8 @@ public class Death : MonoBehaviour
     // The time at which the animation started.
     private float startTime;
 
-    private Transform end;
-    private Transform begining;
+    private Vector3 end;
+    private Vector3 begining;
     private bool update = false;
 
     void Start()
@@ -26,7 +26,7 @@ public class Death : MonoBehaviour
         m_audio = GetComponent<AudioSource>();
     }
 
-    public virtual void OnDeath(Transform spawnPoint)
+    public virtual void OnDeath(Vector3 spawnPoint)
     {
         if (m_deathSound != null)
         {
@@ -36,7 +36,7 @@ public class Death : MonoBehaviour
 
         startTime = Time.time;
         end = spawnPoint;
-        begining = transform.transform;
+        begining = transform.transform.position;
 
         update = true;
     }
@@ -46,14 +46,14 @@ public class Death : MonoBehaviour
         if (update)
         {
             // The center of the arc
-            Vector3 center = (begining.position + end.position) * 0.5F;
+            Vector3 center = (begining + end) * 0.5F;
 
             // move the center a bit downwards to make the arc vertical
             center -= new Vector3(0, 1, 0);
 
             // Interpolate over the arc relative to center
-            Vector3 riseRelCenter = begining.position - center;
-            Vector3 setRelCenter = end.position - center;
+            Vector3 riseRelCenter = begining - center;
+            Vector3 setRelCenter = end - center;
 
             // The fraction of the animation that has happened so far is
             // equal to the elapsed time divided by the desired time for
@@ -63,7 +63,7 @@ public class Death : MonoBehaviour
             transform.position = Vector3.Slerp(riseRelCenter, setRelCenter, fracComplete);
             transform.position += center;
 
-            if (transform.transform == end)
+            if (fracComplete >= 1.0f)
             {
                 update = false;
             }
