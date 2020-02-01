@@ -49,14 +49,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""LeftPhase"",
-                    ""type"": ""Button"",
-                    ""id"": ""7f2300a0-617b-432d-8d9b-1e9f13ccb371"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -213,28 +205,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""RightPhase"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""c16e0da3-b184-4f7d-b77a-5ec9b04fb7d0"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftPhase"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""2ae9dfaf-28de-4f33-b67e-f952c22f0c64"",
-                    ""path"": ""<Gamepad>/leftShoulder"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""LeftPhase"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -275,7 +245,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Catch = m_Player.FindAction("Catch", throwIfNotFound: true);
         m_Player_RightPhase = m_Player.FindAction("RightPhase", throwIfNotFound: true);
-        m_Player_LeftPhase = m_Player.FindAction("LeftPhase", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -329,7 +298,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Catch;
     private readonly InputAction m_Player_RightPhase;
-    private readonly InputAction m_Player_LeftPhase;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -338,7 +306,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Catch => m_Wrapper.m_Player_Catch;
         public InputAction @RightPhase => m_Wrapper.m_Player_RightPhase;
-        public InputAction @LeftPhase => m_Wrapper.m_Player_LeftPhase;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -360,9 +327,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @RightPhase.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
                 @RightPhase.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
                 @RightPhase.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRightPhase;
-                @LeftPhase.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
-                @LeftPhase.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
-                @LeftPhase.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLeftPhase;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -379,9 +343,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @RightPhase.started += instance.OnRightPhase;
                 @RightPhase.performed += instance.OnRightPhase;
                 @RightPhase.canceled += instance.OnRightPhase;
-                @LeftPhase.started += instance.OnLeftPhase;
-                @LeftPhase.performed += instance.OnLeftPhase;
-                @LeftPhase.canceled += instance.OnLeftPhase;
             }
         }
     }
@@ -410,6 +371,5 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnJump(InputAction.CallbackContext context);
         void OnCatch(InputAction.CallbackContext context);
         void OnRightPhase(InputAction.CallbackContext context);
-        void OnLeftPhase(InputAction.CallbackContext context);
     }
 }
