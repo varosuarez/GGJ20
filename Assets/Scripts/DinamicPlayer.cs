@@ -57,7 +57,10 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool canJumpNotGrab = true;
     private bool carrying = false;
     private GameObject objectToCatch;
+    private GameObject objectGrabed;
     private bool availableCatch;
+
+    public Transform carryingPos;
 
     private void Awake() {
         inputMaster = new InputMaster();
@@ -130,18 +133,28 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             if (carrying)
             {
+                if (objectGrabed == null)
+                {
+                    carrying = false;
+                }
+
                 //DROP
-                objectToCatch.transform.SetParent(null);
-                objectToCatch.AddComponent<Rigidbody2D>();
+                objectGrabed.transform.SetParent(null);
+                objectGrabed.AddComponent<Rigidbody2D>();
+                
                 carrying = false;
+                objectGrabed = null;
             }
             else
             {
                 //GRAB
-                if (availableCatch)
+                if (availableCatch && objectToCatch != null)
                 {
-                    objectToCatch.transform.SetParent(transform);
-                    Destroy(objectToCatch.GetComponent<Rigidbody2D>());
+                    objectGrabed = objectToCatch;
+                    objectGrabed.transform.SetParent(carryingPos);
+                    objectGrabed.transform.position = new Vector3(0, 0, 1);
+                    objectToCatch.transform.localPosition = new Vector3(0, 0, 1);
+                    Destroy(objectGrabed.GetComponent<Rigidbody2D>());
                     carrying = true;
                 }
             }
@@ -149,7 +162,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
 
-    public void OnRightPhase(InputAction.CallbackContext context)
+    public void OnLeftPhase(InputAction.CallbackContext context)
     {
         if (state == State.CanPhase)
         {
@@ -157,9 +170,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    public void OnLeftPhase(InputAction.CallbackContext context)
+    public void OnRightPhase(InputAction.CallbackContext context)
     {
-        if (state == State.CanLoad)
+        if (state >= State.CanLoad)
         {
             canJumpNotGrab = !canJumpNotGrab;
 
