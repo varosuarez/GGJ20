@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Feet
   - Floor
+  - Movable
+  - Climbable
   layers:
   - Default
   - TransparentFX
