@@ -91,6 +91,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         animator.SetFloat("Horizontal", horizontalInput);
         if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
