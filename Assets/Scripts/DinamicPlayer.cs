@@ -104,23 +104,18 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (graceFramesRemaining > 0) {
             graceFramesRemaining--;
         }
+        animator.SetBool("IsClimbing", climbing);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
         if (col.CompareTag("Climbable")) {
             climbableColliders++;
-            if (climbableColliders == 1) {
-                animator.SetBool("IsClimbing", true);
-            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D col) {
         if (col.CompareTag("Climbable")) {
             climbableColliders--;
-            if (climbableColliders == 0) {
-                animator.SetBool("IsClimbing", false);
-            }
         }
     }
 
