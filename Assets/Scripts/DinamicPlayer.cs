@@ -35,6 +35,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
 
+    private GameObject m_BackgroundAudio;
+
+
     [SerializeField]
     private State state = State.Powerless;
 
@@ -45,6 +48,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
+        m_BackgroundAudio = GameObject.FindGameObjectWithTag("BackgroundAudio");
     }
 
     public void OnMove(InputAction.CallbackContext ctx) {
@@ -53,7 +57,10 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void OnJump(InputAction.CallbackContext ctx) {}
 
-    public void SetState(State newState) => state = newState;
+    public void SetState(State newState) {
+        state = newState;
+        m_BackgroundAudio.SendMessage("ChangeClip", newState);
+    }
 
     private void FixedUpdate() {
         rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
