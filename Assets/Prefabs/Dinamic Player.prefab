@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 101614322368874029}
   - component: {fileID: 5082035387325767932}
   - component: {fileID: 2826278860648534388}
+  - component: {fileID: 4816283894919768952}
   m_Layer: 8
   m_Name: Dinamic Player
   m_TagString: Player
@@ -152,6 +153,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.431764, y: 10.51}
   m_EdgeRadius: 0
+--- !u!114 &4816283894919768952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298937200162638211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65535b9a2511d3144b06cf1ee691aad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_deathSound: {fileID: 0}
+  animationTime: 3
 --- !u!1 &1563166369327717827
 GameObject:
   m_ObjectHideFlags: 0

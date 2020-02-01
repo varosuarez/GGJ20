@@ -46,4 +46,5 @@ public class DestroyablePlatfrom : MonoBehaviour
             isPlayerColliding = false;
         }
     }
+
 }
