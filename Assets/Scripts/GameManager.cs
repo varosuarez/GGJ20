@@ -5,12 +5,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public enum Phase
-    {
-        RED_RIGHT = 0,
-        BLUE_LEFT = 1,
-    }
-
     /// <summary>
 	/// Punto de spawn inicial
 	/// </summary>

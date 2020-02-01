@@ -61,7 +61,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         Vector2 feet = transform.position;
         feet.y -= boxCol.bounds.extents.y - 0.25f;
-        RaycastHit2D groundHit = Physics2D.Raycast(feet, Vector2.down, groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
+        RaycastHit2D groundHit = Physics2D.BoxCast(feet, new Vector2(boxCol.bounds.extents.x - 0.1f, 0.1f), 0, Vector2.down,groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
         Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
         isGrounded = groundHit.collider != null;
         if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump) {
@@ -83,7 +83,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     //     }
     // }
 
-    private GameManager.Phase phase = GameManager.Phase.RED_RIGHT;
+    private bool phase = false;
     private bool carrying = false;
     private GameObject objectToCatch = null;
     private bool availableCatch = false;
@@ -93,6 +93,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (carrying)
         {
             //DROP
+            objectToCatch.transform.SetParent(null);
+            objectToCatch.AddComponent<Rigidbody2D>();
+            carrying = false;
         }
         else
         {
@@ -100,32 +103,22 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
            if (availableCatch)
             {
                 objectToCatch.transform.SetParent(transform);
-//                objectToCatch.GetComponent<Collider2D>().enabled = false;
+                Destroy(objectToCatch.GetComponent<Rigidbody2D>());
                 carrying = true;
             }
         }
     }
 
 
-    public void OnLeftPhase(InputAction.CallbackContext context)
-    {
-        if (phase == GameManager.Phase.RED_RIGHT)
-        {
-            phase = GameManager.Phase.BLUE_LEFT;
-            //TODO: Cambio color
-        }
-    }
-
     public void OnRightPhase(InputAction.CallbackContext context)
     {
-        if (phase != GameManager.Phase.RED_RIGHT)
+        if (state == State.CanPhase)
         {
-            phase = GameManager.Phase.RED_RIGHT;
-            //TODO: Cambio color
+            phase = !phase;
         }
     }
 
-    public GameManager.Phase GetPhase()
+    public bool IsInPhase()
     {
         return phase;
     }
