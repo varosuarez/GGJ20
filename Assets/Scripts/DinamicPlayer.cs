@@ -59,8 +59,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private GameObject objectToCatch;
     private bool availableCatch;
 
-    public Transform carryingPos;
-
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
@@ -165,7 +163,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             canJumpNotGrab = !canJumpNotGrab;
 
-            if (carrying && objectToCatch != null)
+            if (carrying && objectToCatch)
             {
                 //DROP
                 objectToCatch.transform.SetParent(null);
