@@ -7,6 +7,13 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 {
+    private enum State {
+        Powerless,
+        CanJump,
+        CanLoad,
+        CanClimb,
+        CanRay
+    }
     [Autohook, SerializeField]
     private Rigidbody2D rb = default;
     [Autohook, SerializeField]
@@ -27,6 +34,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float movementInput;
     private bool isGrounded;
     private bool minTimeBetweenJumpsHasPassed = true;
+
+    [SerializeField]
+    private State state = State.Powerless;
 
     private void OnEnable() => inputMaster.Enable();
 
@@ -52,7 +62,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         RaycastHit2D groundHit = Physics2D.Raycast(feet, Vector2.down, groundedRaycastDistance, ~(LayerMask.GetMask("Player")));
         Debug.DrawRay(feet, Vector2.down * groundedRaycastDistance, Color.red);
         isGrounded = groundHit.collider != null;
-        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed) {
+        if (inputMaster.Player.Jump.triggered && isGrounded && minTimeBetweenJumpsHasPassed && state >= State.CanJump) {
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
