@@ -35,25 +35,24 @@ public class Ray : MonoBehaviour
 
             if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
                 //SiJNoC 
-                
-                gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("IgnorePlayer");
             }
             else
             {
                 //NoJNoC              
-                gameObject.layer = LayerMask.NameToLayer("Default");
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("Default");
             }
         }
         else
         {
             if (other.gameObject.GetComponent<DinamicPlayer>().IsInPhase()) {
                 //NoJSiC
-                gameObject.layer = LayerMask.NameToLayer("Default");
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("Default");
             }
             else
             {
                 //SiJSiC
-                gameObject.layer = LayerMask.NameToLayer("IgnorePlayerAndBox");
+                transform.Find("Collider").gameObject.layer = LayerMask.NameToLayer("IgnorePlayerAndBox");
             }
         }
 
