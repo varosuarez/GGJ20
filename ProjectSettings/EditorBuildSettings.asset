@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Bermejo.unity
+    guid: 6859710edc00b1e4ca4a1c09ca60e6c5
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 1f5ad3fafc70694478cc1e34fce1fe09,
       type: 2}
