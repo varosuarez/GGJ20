@@ -123,27 +123,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders++;
-            graceFramesRemaining = graceFrames;
-        }
-    }
-    
-
-    private void OnCollisionStay2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            graceFramesRemaining = graceFrames;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders--;
-            graceFramesRemaining = graceFrames;
-        }
-    }
-
     public void OnCatch(InputAction.CallbackContext context)
     {
         if (!canJumpNotGrab)

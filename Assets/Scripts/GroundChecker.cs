@@ -14,13 +14,18 @@ public class GroundChecker : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col) {
         if (col.CompareTag("Floor")) {
+            if (player.groundColliders == 0) {
+                player.groundColliders++;
+            }
             player.graceFramesRemaining = player.graceFrames;
         }
     }
 
     private void OnTriggerExit2D(Collider2D col) {
         if (col.CompareTag("Floor")) {
-            player.groundColliders--;
+            if (player.groundColliders > 0) {
+                player.groundColliders--;
+            }
             player.graceFramesRemaining = player.graceFrames;
         }
     }
