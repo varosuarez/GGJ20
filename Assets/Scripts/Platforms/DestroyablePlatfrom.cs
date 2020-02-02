@@ -42,7 +42,7 @@ public class DestroyablePlatfrom : MonoBehaviour
     {
         if (other.collider.tag == "Player")
         {
-            timeToDestroy = 1;
+            timeToDestroy = 2;
             isPlayerColliding = false;
         }
     }
