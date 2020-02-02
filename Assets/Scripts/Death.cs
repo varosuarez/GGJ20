@@ -39,6 +39,7 @@ public class Death : MonoBehaviour
         begining = transform.transform.position;
 
         update = true;
+        gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
     }
 
     void Update()
@@ -66,6 +67,7 @@ public class Death : MonoBehaviour
             if (fracComplete >= 1.0f)
             {
                 update = false;
+                gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
             }
         }
     }

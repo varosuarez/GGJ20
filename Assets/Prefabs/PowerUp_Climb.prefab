@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 3
+  m_powerupSound: {fileID: 8300000, guid: 41ad2703308895a4b9ca33c8356175c7, type: 3}
 --- !u!50 &1105919644920890102
 Rigidbody2D:
   serializedVersion: 4
