@@ -69,7 +69,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private GameObject objectToCatch;
     private bool availableCatch;
     private bool m_Grounded;
-    private Rigidbody2D m_Rigidbody2D;
     private Vector3 m_Velocity = Vector3.zero;
     private bool jump;
     float horizontalMove = 0f, verticalMove = 0f;
@@ -121,8 +120,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-        foreach (var col in colliders) {
-            if (col.gameObject != gameObject) {
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            if (colliders[i].gameObject != gameObject) {
                 m_Grounded = true;
                 break;
             }
@@ -248,21 +248,23 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     public void DiscoverUI(State state)
-    {
-        switch (state)
-        {
-            case State.CanJump:
-                m_canvas.discoverJump();
-                break;
-            case State.CanClimb:
-                m_canvas.discoverClimb();
-                break;
-            case State.CanLoad:
-                m_canvas.discoverGrab();
-                break;
-            case State.CanPhase:
-                m_canvas.discoverPhase();
-                break;
+    {  
+        if (m_canvas != null) {
+            switch (state)
+            {
+                case State.CanJump:
+                    m_canvas.discoverJump();
+                    break;
+                case State.CanClimb:
+                    m_canvas.discoverClimb();
+                    break;
+                case State.CanLoad:
+                    m_canvas.discoverGrab();
+                    break;
+                case State.CanPhase:
+                    m_canvas.discoverPhase();
+                    break;
+            }
         }
     }
 
@@ -273,9 +275,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (climbing2 && state >= State.CanClimb)
         {
             // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(m_Rigidbody2D.velocity.x, moveV * 10f);
+            Vector3 targetVelocity = new Vector2(rb.velocity.x, moveV * 10f);
             // And then smoothing it out and applying it to the character
-            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
             
             rb.gravityScale = 0;
             rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed) + additionalDragClimbing;
@@ -289,7 +291,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (graceFramesRemaining > 0)
         {
             graceFramesRemaining--;
-        }     
+        }
         
         animator.SetBool("IsClimbing", climbing2);
 
@@ -298,16 +300,16 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             animator.SetFloat("Horizontal", horizontalInput);
             // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
+            Vector3 targetVelocity = new Vector2(move * 10f, rb.velocity.y);
             // And then smoothing it out and applying it to the character
-            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
         // If the player should jump...
         if (canJumpNotGrab && m_Grounded && jump)
         {
             // Add a vertical force to the player.
             m_Grounded = false;
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            rb.AddForce(new Vector2(0f, m_JumpForce));
         }
     }
 
