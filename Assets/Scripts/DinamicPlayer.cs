@@ -19,16 +19,14 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     public Rigidbody2D rb = default;
     [Autohook, SerializeField]
     private Animator animator = default;
-
     [SerializeField]
     private float acceleration = 10f;
     [SerializeField]
     private float maxSpeed = 10f;
     [SerializeField]
     private float additionalDragClimbing = 6;
-    public int graceFrames = 5;
-
-
+    [SerializeField]
+    private int graceFrames = 5;
     [SerializeField]
     private State state = State.Powerless;
 
@@ -45,10 +43,10 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool m_AirControl = false;
     [Tooltip("A mask determining what is ground to the character")]
     [SerializeField]
-    private LayerMask m_WhatIsGround;
+    private LayerMask m_WhatIsGround = default;
     [Tooltip("A position marking where to check if the player is grounded")]
     [SerializeField]
-    private Transform m_GroundCheck;
+    private Transform m_GroundCheck = default;
     [SerializeField]
     [Tooltip("Radius of the overlap circle to determine if grounded")]
     private float k_GroundedRadius = .2f;
@@ -65,18 +63,21 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private GameObject m_BackgroundAudio;
     private UIController m_canvas;
 
-    private void OnEnable() => inputMaster.Enable();
-
-    private void OnDisable() => inputMaster.Disable();
-
-
     private bool phase = false;
     private bool canJumpNotGrab = true;
     private bool carrying = false;
     private GameObject objectToCatch;
     private bool availableCatch;
-
+    private bool m_Grounded;
+    private Rigidbody2D m_Rigidbody2D;
+    private Vector3 m_Velocity = Vector3.zero;
+    private bool jump;
+    float horizontalMove = 0f, verticalMove = 0f;
     public Transform carryingPos;
+
+    private void OnEnable() => inputMaster.Enable();
+
+    private void OnDisable() => inputMaster.Disable();
 
     private void Awake() {
         inputMaster = new InputMaster();
@@ -85,8 +86,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         originalGravity = rb.gravityScale;
         availableCatch = false;
         m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
-        m_Rigidbody2D = GetComponent<Rigidbody2D>();
-
     }
 
     public void OnHorizontal(InputAction.CallbackContext ctx) {
@@ -106,13 +105,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    public State GetState() => state;
 
-    private bool m_Grounded;
-    private Rigidbody2D m_Rigidbody2D;
-    private Vector3 m_Velocity = Vector3.zero;
-    private bool jump;
-    float horizontalMove = 0f, verticalMove = 0f;
+    
+    public State GetState() => state;
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
@@ -301,7 +296,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
         {
-            animator.SetFloat("Horizontal", move);
+            animator.SetFloat("Horizontal", horizontalInput);
             // Move the character by finding the target velocity
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
