@@ -1,0 +1,895 @@
+fileFormatVersion: 2
+guid: 93e6fca25c562ce499d1a10531786789
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8466604175563109752
+    second: jump_onehand_spritesheet_0
+  - first:
+      213: -7745858601999036076
+    second: jump_onehand_spritesheet_1
+  - first:
+      213: -7657981066338236356
+    second: jump_onehand_spritesheet_2
+  - first:
+      213: -6656898688553458914
+    second: jump_onehand_spritesheet_3
+  - first:
+      213: -2233797184699614903
+    second: jump_onehand_spritesheet_4
+  - first:
+      213: -7015414277547248087
+    second: jump_onehand_spritesheet_5
+  - first:
+      213: -8128946939351750757
+    second: jump_onehand_spritesheet_6
+  - first:
+      213: 1013364913675918395
+    second: jump_onehand_spritesheet_7
+  - first:
+      213: -9192304202524718093
+    second: jump_onehand_spritesheet_8
+  - first:
+      213: -2702433502845441603
+    second: jump_onehand_spritesheet_9
+  - first:
+      213: -2434066783266112690
+    second: jump_onehand_spritesheet_10
+  - first:
+      213: -3030290791213962837
+    second: jump_onehand_spritesheet_11
+  - first:
+      213: 5146708960928058627
+    second: jump_onehand_spritesheet_12
+  - first:
+      213: -3077416279291175774
+    second: jump_onehand_spritesheet_13
+  - first:
+      213: -7920903202499356761
+    second: jump_onehand_spritesheet_14
+  - first:
+      213: -5965962331030836684
+    second: jump_onehand_spritesheet_15
+  - first:
+      213: 3141358723085097035
+    second: jump_onehand_spritesheet_16
+  - first:
+      213: -1528960721606370961
+    second: jump_onehand_spritesheet_17
+  - first:
+      213: -1166270844561072368
+    second: jump_onehand_spritesheet_18
+  - first:
+      213: -5656598990165972911
+    second: jump_onehand_spritesheet_19
+  - first:
+      213: 6736969425500541968
+    second: jump_onehand_spritesheet_20
+  - first:
+      213: -8351268724948162713
+    second: jump_onehand_spritesheet_21
+  - first:
+      213: 6533885373753576863
+    second: jump_onehand_spritesheet_22
+  - first:
+      213: -3517521962904371778
+    second: jump_onehand_spritesheet_23
+  - first:
+      213: -393790703464167850
+    second: jump_onehand_spritesheet_24
+  - first:
+      213: -6083931017147479953
+    second: jump_onehand_spritesheet_25
+  - first:
+      213: 4126254305371102107
+    second: jump_onehand_spritesheet_26
+  - first:
+      213: -2569912702300912913
+    second: jump_onehand_spritesheet_27
+  - first:
+      213: 4808420174255656348
+    second: jump_onehand_spritesheet_28
+  - first:
+      213: -8592456568841815019
+    second: jump_onehand_spritesheet_29
+  - first:
+      213: 4533058657096542090
+    second: jump_onehand_spritesheet_30
+  - first:
+      213: 1832763307865640263
+    second: jump_onehand_spritesheet_31
+  - first:
+      213: 575865108251446903
+    second: jump_onehand_spritesheet_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8753742c3ab6f7570800000000000000
+      internalID: 8466604175563109752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451917b04ae218490800000000000000
+      internalID: -7745858601999036076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c380e3c3bc269b590800000000000000
+      internalID: -7657981066338236356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e13e10b99e1fd93a0800000000000000
+      internalID: -6656898688553458914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94936b1bb45fff0e0800000000000000
+      internalID: -2233797184699614903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926b79242ed34ae90800000000000000
+      internalID: -7015414277547248087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97a0f1e3dd203f80800000000000000
+      internalID: -8128946939351750757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c5f7b1502301e00800000000000000
+      internalID: 1013364913675918395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb0f2dd7006e6080800000000000000
+      internalID: -9192304202524718093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db968c91c070f7ad0800000000000000
+      internalID: -2702433502845441603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b78d72825783ed0800000000000000
+      internalID: -2434066783266112690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba9ed8f949e32f5d0800000000000000
+      internalID: -3030290791213962837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30dcf621888cc6740800000000000000
+      internalID: 5146708960928058627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac58d6e232da45d0800000000000000
+      internalID: -3077416279291175774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a795ca018c431290800000000000000
+      internalID: -7920903202499356761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43aab837ed4a43da0800000000000000
+      internalID: -5965962331030836684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48df817d19589b20800000000000000
+      internalID: 3141358723085097035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f699021135a08cae0800000000000000
+      internalID: -1528960721606370961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01fda0698d290dfe0800000000000000
+      internalID: -1166270844561072368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158e25a3039bf71b0800000000000000
+      internalID: -5656598990165972911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01490ad9ff58e7d50800000000000000
+      internalID: 6736969425500541968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767a2a177555a1c80800000000000000
+      internalID: -8351268724948162713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9dc3b121260daa50800000000000000
+      internalID: 6533885373753576863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd337f49604f2fc0800000000000000
+      internalID: -3517521962904371778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 656ca2c0179f88af0800000000000000
+      internalID: -393790703464167850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6881f459f8819ba0800000000000000
+      internalID: -6083931017147479953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b129ccd66634930800000000000000
+      internalID: 4126254305371102107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe207936306d55cd0800000000000000
+      internalID: -2569912702300912913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9d84512ca0fab240800000000000000
+      internalID: 4808420174255656348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c3632864671c880800000000000000
+      internalID: -8592456568841815019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87af3ad4d8a8ee30800000000000000
+      internalID: 4533058657096542090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d83b2a4884f6910800000000000000
+      internalID: 1832763307865640263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump_onehand_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e8edfc342edf700800000000000000
+      internalID: 575865108251446903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
