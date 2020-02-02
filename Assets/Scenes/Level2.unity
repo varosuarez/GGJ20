@@ -9443,12 +9443,12 @@ PrefabInstance:
     - target: {fileID: 6724688122422373958, guid: 05eb6bb3533dc2b459566f03f34a0d87,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 6724688122422373958, guid: 05eb6bb3533dc2b459566f03f34a0d87,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6724688122422373958, guid: 05eb6bb3533dc2b459566f03f34a0d87,
         type: 3}
@@ -19951,6 +19951,11 @@ PrefabInstance:
       propertyPath: m_AirControl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2401657508557870753, guid: a885d3c96a17dfb45b64e3f48bec92ae,
+        type: 3}
+      propertyPath: state
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2698341221386825949, guid: a885d3c96a17dfb45b64e3f48bec92ae,
         type: 3}
       propertyPath: m_Name
@@ -19964,12 +19969,12 @@ PrefabInstance:
     - target: {fileID: 7602183591227173600, guid: a885d3c96a17dfb45b64e3f48bec92ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -27
       objectReference: {fileID: 0}
     - target: {fileID: 7602183591227173600, guid: a885d3c96a17dfb45b64e3f48bec92ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 7602183591227173600, guid: a885d3c96a17dfb45b64e3f48bec92ae,
         type: 3}
