@@ -1615,7 +1615,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1153687650}
   m_LocalRotation: {x: -0.026781853, y: -0.026810981, z: -0.0007185641, w: 0.99928147}
-  m_LocalPosition: {x: 3.9896586, y: 5.0265923, z: -9.942575}
+  m_LocalPosition: {x: 3.9900117, y: 5.0265923, z: -9.942556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1111177116}
@@ -2038,6 +2038,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2401657508557870753, guid: a885d3c96a17dfb45b64e3f48bec92ae,
+        type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 1679438090}
     - target: {fileID: 2698341221386825949, guid: a885d3c96a17dfb45b64e3f48bec92ae,
         type: 3}
       propertyPath: m_Name
@@ -2178,7 +2183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1674911334}
   m_LocalRotation: {x: -0.026781853, y: -0.026810981, z: -0.0007185641, w: 0.99928147}
-  m_LocalPosition: {x: 3.9896586, y: 5.0265923, z: -9.942575}
+  m_LocalPosition: {x: 3.9900117, y: 5.0265923, z: -9.942556}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2218,6 +2223,12 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!212 &1679438090 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5420221905310820444, guid: a885d3c96a17dfb45b64e3f48bec92ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 1615842164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2098544207
 PrefabInstance:
   m_ObjectHideFlags: 0

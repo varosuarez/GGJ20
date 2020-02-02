@@ -19,6 +19,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     public Rigidbody2D rb = default;
     [Autohook, SerializeField]
     private Animator animator = default;
+    [Autohook, SerializeField]
+    private SpriteRenderer sprite;
     [SerializeField]
     private float acceleration = 10f;
     [SerializeField]
@@ -89,6 +91,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void OnHorizontal(InputAction.CallbackContext ctx) {
         horizontalInput = ctx.ReadValue<float>();
+        sprite.flipX = horizontalInput < 0;
         horizontalMove = horizontalInput * runSpeed;
     }
 
@@ -318,6 +321,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             // Add a vertical force to the player.
             m_Grounded = false;
             rb.AddForce(new Vector2(0f, m_JumpForce));
+            animator.SetTrigger("Jump");
         }
     }
 
