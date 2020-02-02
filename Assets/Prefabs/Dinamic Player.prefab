@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4816283894919768952}
   - component: {fileID: 2129716508217946525}
   - component: {fileID: 7935440331195005687}
+  - component: {fileID: 604016027972428159}
   m_Layer: 8
   m_Name: Dinamic Player
   m_TagString: Player
@@ -116,7 +117,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298937200162638211}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e943f28cd46b0b4aadd41c4b35777fe, type: 3}
   m_Name: 
@@ -182,6 +183,29 @@ CapsuleCollider2D:
   m_Offset: {x: -0.41870022, y: -0.79358625}
   m_Size: {x: 4.2090206, y: 10.280245}
   m_Direction: 0
+--- !u!114 &604016027972428159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298937200162638211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66652216a0766b8459c713b0788e7c4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 20000
+  m_MovementSmoothing: 0.05
+  m_AirControl: 0
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 4096
+  m_GroundCheck: {fileID: 0}
+  m_CeilingCheck: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1563166369327717827
 GameObject:
   m_ObjectHideFlags: 0
