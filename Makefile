@@ -42,7 +42,7 @@ Builds/.web: $(shell find Assets -type f | sed 's: :\\ :g') Packages/manifest.js
 Builds/.win: $(shell find Assets -type f | sed 's: :\\ :g') Packages/manifest.json
 	"$$UNITY" \
 		-batchmode \
-		-executeMethod HCF.Build.BuildWin \
+		-executeMethod HCF.Build.BuildWinMono \
 		-logFile /dev/stdout \
 		-quit
 

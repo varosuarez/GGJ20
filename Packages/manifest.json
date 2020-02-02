@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.alvarber.hcf": "https://gitlab.com/AlvarBer/hcf.git#0.0.35",
+    "com.alvarber.hcf": "https://gitlab.com/AlvarBer/hcf.git#0.0.36",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.cinemachine": "2.5.0",
@@ -48,8 +48,8 @@
   },
   "lock": {
     "com.alvarber.hcf": {
-      "revision": "0.0.35",
-      "hash": "7979bbd21f8ed71b6bdf808a310d04844caaf11b"
+      "revision": "0.0.36",
+      "hash": "e50f7ec7c3e6f3523755a17550f79fec6f2b8cf2"
     }
   }
 }
