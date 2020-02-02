@@ -95,6 +95,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         horizontalMove = horizontalInput * runSpeed;
     }
 
+    public void OnVertical(InputAction.CallbackContext ctx) => verticalInput = ctx.ReadValue<float>();
+
     // Update is called once per frame	
     void Update()
     {
