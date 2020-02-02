@@ -52,6 +52,7 @@ MonoBehaviour:
     type: 3}
   isNotPressed: {fileID: -913810745074246122, guid: bbb4ee458fef4a04b9425acfb05df90f,
     type: 3}
+  m_doorSound: {fileID: 8300000, guid: c91bd4b3344004f48a216b8957ffabed, type: 3}
 --- !u!61 &6966255114002778809
 BoxCollider2D:
   m_ObjectHideFlags: 0
