@@ -324,7 +324,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
         // If the player should jump...
-        if (canJumpNotGrab && m_Grounded && jump)
+        if (canJumpNotGrab && m_Grounded && jump && state >= State.CanJump)
         {
             // Add a vertical force to the player.
             m_Grounded = false;
