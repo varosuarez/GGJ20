@@ -12,8 +12,7 @@ public class Switch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (isPressed)
-            this.GetComponent<SpriteRenderer>().sprite = isNotPressed;
+
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +24,7 @@ public class Switch : MonoBehaviour
                 d.Activate();
                 this.GetComponent<SpriteRenderer>().sprite = isPressed;
                 doorActive = true;
+                Destroy(other.GetComponent<PickUp>());
 
                 GameObject.FindGameObjectWithTag("Player").GetComponent<DinamicPlayer>().SendMessage("DisableCatch");
                 if (m_doorSound != null)
@@ -33,6 +33,7 @@ public class Switch : MonoBehaviour
                     m_audio.clip = m_doorSound;
                     m_audio.Play();
                 }
+
             }
         }
     }

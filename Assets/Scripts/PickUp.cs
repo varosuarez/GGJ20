@@ -23,8 +23,7 @@ public class PickUp : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.E))
         {
-            
-            transform.parent = null;
+           transform.parent = null;
         }
     }
 
