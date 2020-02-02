@@ -17,6 +17,7 @@ public class SongManager : MonoBehaviour
     void Start()
     {
         audio = gameObject.GetComponent<AudioSource>();
+        ChangeClip(DinamicPlayer.State.Powerless);
     }
 
 
