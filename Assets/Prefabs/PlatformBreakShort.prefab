@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8181785944077389267}
   - component: {fileID: 3411912549000812018}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beam_break-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91,7 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3501173840633292331}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PlatformBreakShort
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3070872521812813165}
   - component: {fileID: 605475472108975233}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: beam_break-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
