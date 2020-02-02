@@ -8367,7 +8367,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad778b7603082a449048ef5e72e5437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loadLevel: Scenes/Zona4
+  loadLevel: Scenes/Credits
 --- !u!61 &649617082
 BoxCollider2D:
   m_ObjectHideFlags: 0
