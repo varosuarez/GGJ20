@@ -123,9 +123,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 101614322368874029}
   animator: {fileID: 2129716508217946525}
-  acceleration: 1500
+  acceleration: 1350
   maxSpeed: 10
-  jumpStrength: 600
+  jumpStrength: 900
   minTimeBetweenJumps: 0.05
   additionalDragClimbing: 6
   graceFrames: 5
