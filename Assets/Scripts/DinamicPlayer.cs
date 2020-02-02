@@ -1,7 +1,6 @@
 using HCF;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Events;
 
 [DisallowMultipleComponent]
 [SelectionBase]
@@ -37,8 +36,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [HideInInspector]
     public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
-    //private bool isGrounded => groundColliders > 0;
-    private bool isGrounded => (rb.velocity.y < 0.01f && rb.velocity.y > -0.01f) || groundColliders > 0;
+    private bool isGrounded => groundColliders > 0;
     private float originalGravity;
     public int graceFramesRemaining = 0;
 
@@ -62,11 +60,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public Transform carryingPos;
 
-    [Header("Events")]
-    [Space]
-
-    public UnityEvent OnLandEvent;
-
     private void Awake() {
         inputMaster = new InputMaster();
         inputMaster.Player.SetCallbacks(this);
@@ -76,8 +69,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
 
-        if (OnLandEvent == null)
-            OnLandEvent = new UnityEvent();
     }
 
     public void OnHorizontal(InputAction.CallbackContext ctx) => horizontalInput = ctx.ReadValue<float>();
@@ -89,6 +80,11 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (m_BackgroundAudio != null) {
             m_BackgroundAudio.SendMessage("ChangeClip", newState);
         }
+    }
+
+    public State GetState()
+    {
+        return state;
     }
 
     [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
@@ -113,6 +109,10 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
     }
 
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawSphere(m_GroundCheck.position, k_GroundedRadius);
+    }
 
     private void FixedUpdate() {
         bool wasGrounded = m_Grounded;
@@ -126,8 +126,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             if (colliders[i].gameObject != gameObject)
             {
                 m_Grounded = true;
-                if (!wasGrounded)
-                    OnLandEvent.Invoke();
+                break;
             }
         }
 
@@ -306,7 +305,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (canJumpNotGrab && m_Grounded && jump)
         {
             // Add a vertical force to the player.
             m_Grounded = false;
