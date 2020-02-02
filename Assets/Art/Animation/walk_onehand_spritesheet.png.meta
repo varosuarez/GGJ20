@@ -1,0 +1,1183 @@
+fileFormatVersion: 2
+guid: 23e526fb9c2cbad4a93420c14bd600f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4625131634179065265
+    second: walk_onehand_spritesheet_0
+  - first:
+      213: -7536015383025155706
+    second: walk_onehand_spritesheet_1
+  - first:
+      213: -7254353860225053222
+    second: walk_onehand_spritesheet_2
+  - first:
+      213: 7608876773160567362
+    second: walk_onehand_spritesheet_3
+  - first:
+      213: 8928540250266795416
+    second: walk_onehand_spritesheet_4
+  - first:
+      213: -2005450172749675633
+    second: walk_onehand_spritesheet_5
+  - first:
+      213: -2608672158957725541
+    second: walk_onehand_spritesheet_6
+  - first:
+      213: 1997566577027630341
+    second: walk_onehand_spritesheet_7
+  - first:
+      213: 192499719360308487
+    second: walk_onehand_spritesheet_8
+  - first:
+      213: 4844573257001217166
+    second: walk_onehand_spritesheet_9
+  - first:
+      213: -8465910943701912966
+    second: walk_onehand_spritesheet_10
+  - first:
+      213: 466207834505464830
+    second: walk_onehand_spritesheet_11
+  - first:
+      213: 475923030477677211
+    second: walk_onehand_spritesheet_12
+  - first:
+      213: -4266064785399805773
+    second: walk_onehand_spritesheet_13
+  - first:
+      213: -1129988461843184412
+    second: walk_onehand_spritesheet_14
+  - first:
+      213: 2285303959077813538
+    second: walk_onehand_spritesheet_15
+  - first:
+      213: 6060164662307636450
+    second: walk_onehand_spritesheet_16
+  - first:
+      213: 3217978722461096301
+    second: walk_onehand_spritesheet_17
+  - first:
+      213: 7573420449676898698
+    second: walk_onehand_spritesheet_18
+  - first:
+      213: 1258131960897152069
+    second: walk_onehand_spritesheet_19
+  - first:
+      213: 2020235588412858771
+    second: walk_onehand_spritesheet_20
+  - first:
+      213: 8284738157455581761
+    second: walk_onehand_spritesheet_21
+  - first:
+      213: 5570249349895535083
+    second: walk_onehand_spritesheet_22
+  - first:
+      213: 2384397425466568083
+    second: walk_onehand_spritesheet_23
+  - first:
+      213: 3893893329843007914
+    second: walk_onehand_spritesheet_24
+  - first:
+      213: -2421635835378796291
+    second: walk_onehand_spritesheet_25
+  - first:
+      213: -4395634335388189356
+    second: walk_onehand_spritesheet_26
+  - first:
+      213: 2146554770272549060
+    second: walk_onehand_spritesheet_27
+  - first:
+      213: -1778642230020770182
+    second: walk_onehand_spritesheet_28
+  - first:
+      213: 839010801941808021
+    second: walk_onehand_spritesheet_29
+  - first:
+      213: 163224892647093058
+    second: walk_onehand_spritesheet_30
+  - first:
+      213: -5626635981573141735
+    second: walk_onehand_spritesheet_31
+  - first:
+      213: 6138062356892364949
+    second: walk_onehand_spritesheet_32
+  - first:
+      213: -8014531116499439798
+    second: walk_onehand_spritesheet_33
+  - first:
+      213: -2818510098082378889
+    second: walk_onehand_spritesheet_34
+  - first:
+      213: -8145079707389455788
+    second: walk_onehand_spritesheet_35
+  - first:
+      213: -4108462474586507984
+    second: walk_onehand_spritesheet_36
+  - first:
+      213: 6315062903411574932
+    second: walk_onehand_spritesheet_37
+  - first:
+      213: 18371791385279869
+    second: walk_onehand_spritesheet_38
+  - first:
+      213: 7023362924223141975
+    second: walk_onehand_spritesheet_39
+  - first:
+      213: 5489511262227163351
+    second: walk_onehand_spritesheet_40
+  - first:
+      213: -1550867605703714590
+    second: walk_onehand_spritesheet_41
+  - first:
+      213: 6700992318612048756
+    second: walk_onehand_spritesheet_42
+  - first:
+      213: 286252533275722491
+    second: walk_onehand_spritesheet_43
+  - first:
+      213: 3547912704312238610
+    second: walk_onehand_spritesheet_44
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ab551a84b30dfb0800000000000000
+      internalID: -4625131634179065265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68108e8cfe1ba6790800000000000000
+      internalID: -7536015383025155706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: add4d4e699b535b90800000000000000
+      internalID: -7254353860225053222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 242c4f39c19289960800000000000000
+      internalID: 7608876773160567362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89dfdeb5d0c88eb70800000000000000
+      internalID: 8928540250266795416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f83828671b53b24e0800000000000000
+      internalID: -2005450172749675633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b989fd52e722ccbd0800000000000000
+      internalID: -2608672158957725541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505cceed738c8bb10800000000000000
+      internalID: 1997566577027630341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 5024
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70565df8975eba200800000000000000
+      internalID: 192499719360308487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c2ae7a5b16b3340800000000000000
+      internalID: 4844573257001217166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a723e8cd9da038a80800000000000000
+      internalID: -8465910943701912966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbc33f2e8d487600800000000000000
+      internalID: 466207834505464830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b92ac048971da9600800000000000000
+      internalID: 475923030477677211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b801752ea4ebc4c0800000000000000
+      internalID: -4266064785399805773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e40c8b1b797150f0800000000000000
+      internalID: -1129988461843184412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d70acb7d707bf10800000000000000
+      internalID: 2285303959077813538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4c839f6a70a1450800000000000000
+      internalID: 6060164662307636450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d691f07399e88ac20800000000000000
+      internalID: 3217978722461096301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a81bba5f5c13a1960800000000000000
+      internalID: 7573420449676898698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54427d14a58c57110800000000000000
+      internalID: 1258131960897152069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39163f16091590c10800000000000000
+      internalID: 2020235588412858771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142a344b57d49f270800000000000000
+      internalID: 8284738157455581761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be9bfd275408d4d40800000000000000
+      internalID: 5570249349895535083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d6a4c43d4171120800000000000000
+      internalID: 2384397425466568083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa13e8e4a53e90630800000000000000
+      internalID: 3893893329843007914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df8f3e0c90f946ed0800000000000000
+      internalID: -2421635835378796291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d3dac6cd19ff2c0800000000000000
+      internalID: -4395634335388189356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8f30dc0381acd10800000000000000
+      internalID: 2146554770272549060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a767a11c05ef057e0800000000000000
+      internalID: -1778642230020770182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593057c01e3c4ab00800000000000000
+      internalID: 839010801941808021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2433bb0dc24e34200800000000000000
+      internalID: 163224892647093058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bc6edc26c2ae1b0800000000000000
+      internalID: -5626635981573141735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59034c75137ce2550800000000000000
+      internalID: 6138062356892364949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4f6cbf896aa6c090800000000000000
+      internalID: -8014531116499439798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bc2f7bff3a2e8d0800000000000000
+      internalID: -2818510098082378889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4521fcd192dd6fe80800000000000000
+      internalID: -8145079707389455788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035bf3d952fcbf6c0800000000000000
+      internalID: -4108462474586507984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4980814804c93a750800000000000000
+      internalID: 6315062903411574932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d38630c05414000800000000000000
+      internalID: 18371791385279869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75818f24e5ff77160800000000000000
+      internalID: 7023362924223141975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d86e878869ae2c40800000000000000
+      internalID: 5489511262227163351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e89e5421263a7ae0800000000000000
+      internalID: -1550867605703714590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b0e79a205befc50800000000000000
+      internalID: 6700992318612048756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf284f19929f8f300800000000000000
+      internalID: 286252533275722491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walk_onehand_spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21260a29ec7bc3130800000000000000
+      internalID: 3547912704312238610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
