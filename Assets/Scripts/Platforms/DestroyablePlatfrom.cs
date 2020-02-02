@@ -5,10 +5,9 @@ using HCF;
 
 public class DestroyablePlatfrom : MonoBehaviour
 {
-    public float timeStart = 2.0f;
+    public float timeStart = 4.0f;
     private float timeLeftToDestroy;
-    private float timeLeftToEnable;
-    public float sakeSpeed = 200f;
+    private float sakeSpeed = 200f;
     bool isPlayerColliding = false;
     Vector3 startingPos, endPos;
 
@@ -19,7 +18,6 @@ public class DestroyablePlatfrom : MonoBehaviour
         endPos.x = transform.position.x;
         endPos.y = transform.position.y;
         timeLeftToDestroy = timeStart;
-        timeLeftToEnable = timeStart;
     }
 
 
@@ -40,16 +38,17 @@ public class DestroyablePlatfrom : MonoBehaviour
         {
             isPlayerColliding = true;
             timeLeftToDestroy -= Time.deltaTime;
+            Debug.Log(timeLeftToDestroy);
             if(timeLeftToDestroy <= 0)
             {
                transform.GetChild(0).gameObject.SetActive(false);
                GetComponent<BoxCollider2D>().enabled = false;
-               timeLeftToDestroy = timeStart;
                 this.RunAfter(timeStart, () =>
                 {
                     transform.GetChild(0).gameObject.SetActive(true);
                     GetComponent<BoxCollider2D>().enabled = true;
                     isPlayerColliding = false;
+                    timeLeftToDestroy = timeStart;
                 }
                 );
             }
