@@ -91,6 +91,11 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
+    public State GetState()
+    {
+        return state;
+    }
+
     [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
