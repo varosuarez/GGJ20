@@ -23,8 +23,7 @@ public class Switch : MonoBehaviour
                 d.Activate();
                 this.GetComponent<SpriteRenderer>().sprite = isPressed;
                 doorActive = true;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<DinamicPlayer>().SendMessage("DisableCatch");
-                Destroy(other.GetComponentInChildren<Catchable>());
+                Destroy(other.GetComponent<PickUp>());
             }
         }
     }
