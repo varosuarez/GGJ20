@@ -140,11 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c1f89d4d004adc4fa069730342224c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerlessAudio: {fileID: 8300000, guid: 4626dbcd36f3273418f0ec957ffa77d1, type: 3}
-  canJumpAudio: {fileID: 8300000, guid: ec9858da37923b04abe78282432c2fca, type: 3}
-  canLoadAudio: {fileID: 8300000, guid: a46c1f0a807c3864ca37882da379d4e2, type: 3}
-  canClimbAudio: {fileID: 0}
-  canPhaseAudio: {fileID: 0}
+  powerlessAudio: {fileID: 8300000, guid: 60accc56da3e8974f990383b0efde766, type: 3}
+  canJumpAudio: {fileID: 8300000, guid: 3f624438d3f5d7848a74ee84d27176fa, type: 3}
+  canLoadAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
+  canClimbAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
+  canPhaseAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
 --- !u!1 &6724688122422373961
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,8 +171,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724688122422373961}
-  m_LocalRotation: {x: -0.026781853, y: -0.026810981, z: -0.0007185641, w: 0.99928147}
-  m_LocalPosition: {x: 0.77584314, y: 3.2065923, z: -9.943985}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.2911592, y: 3.8331966, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3871412393553873800}
