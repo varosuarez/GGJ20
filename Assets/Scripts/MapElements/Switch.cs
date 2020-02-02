@@ -24,7 +24,7 @@ public class Switch : MonoBehaviour
                 d.Activate();
                 this.GetComponent<SpriteRenderer>().sprite = isPressed;
                 doorActive = true;
-                Destroy(other.GetComponent<PickUp>());
+                Destroy(other.GetComponentInChildren<Catchable>());
 
                 GameObject.FindGameObjectWithTag("Player").GetComponent<DinamicPlayer>().SendMessage("DisableCatch");
                 if (m_doorSound != null)
