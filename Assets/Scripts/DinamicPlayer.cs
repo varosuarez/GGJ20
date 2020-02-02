@@ -17,7 +17,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     [Autohook, SerializeField]
     public Rigidbody2D rb = default;
-
     [Autohook, SerializeField]
     private Animator animator = default;
 
@@ -29,23 +28,42 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private float additionalDragClimbing = 6;
     public int graceFrames = 5;
 
+
+    [SerializeField]
+    private State state = State.Powerless;
+
+    [Header("Movement")]
+    [Tooltip("Amount of force added when the player jumps.")]
+    [SerializeField]
+    private float m_JumpForce = 400f;
+    [Tooltip("How much to smooth out the movement")]
+    [Range(0, .3f)]
+    [SerializeField]
+    private float m_MovementSmoothing = .05f;
+    [Tooltip("Whether or not a player can steer while jumping")]
+    [SerializeField]
+    private bool m_AirControl = false;
+    [Tooltip("A mask determining what is ground to the character")]
+    [SerializeField]
+    private LayerMask m_WhatIsGround;
+    [Tooltip("A position marking where to check if the player is grounded")]
+    [SerializeField]
+    private Transform m_GroundCheck;
+    [SerializeField]
+    [Tooltip("Radius of the overlap circle to determine if grounded")]
+    private float k_GroundedRadius = .2f;
+    [SerializeField]
+    private float runSpeed = 40f;
+
     private InputMaster inputMaster;
     private float horizontalInput;
     private float verticalInput;
     private int climbableColliders = 0;
-    [HideInInspector]
-    public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
-    private bool isGrounded => groundColliders > 0;
     private float originalGravity;
-    public int graceFramesRemaining = 0;
-
+    private int graceFramesRemaining = 0;
     private GameObject m_BackgroundAudio;
-
     private UIController m_canvas;
-
-    [SerializeField]
-    private State state = State.Powerless;
 
     private void OnEnable() => inputMaster.Enable();
 
@@ -89,29 +107,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     public State GetState() => state;
-
-    [Header("Movement")]
-    [Tooltip("Amount of force added when the player jumps.")]
-    [SerializeField]
-    private float m_JumpForce = 400f;
-    [Tooltip("How much to smooth out the movement")]
-    [Range(0, .3f)]
-    [SerializeField]
-    private float m_MovementSmoothing = .05f;
-    [Tooltip("Whether or not a player can steer while jumping")]
-    [SerializeField]
-    private bool m_AirControl = false;
-    [Tooltip("A mask determining what is ground to the character")]
-    [SerializeField]
-    private LayerMask m_WhatIsGround;
-    [Tooltip("A position marking where to check if the player is grounded")]
-    [SerializeField]
-    private Transform m_GroundCheck;
-    [SerializeField]
-    [Tooltip("Radius of the overlap circle to determine if grounded")]
-    private float k_GroundedRadius = .2f;
-    [SerializeField]
-    private float runSpeed = 40f;
 
     private bool m_Grounded;
     private Rigidbody2D m_Rigidbody2D;
