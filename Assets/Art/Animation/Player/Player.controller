@@ -292,10 +292,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-<<<<<<< HEAD
     m_Controller: {fileID: 9100000}
-=======
-    m_Controller: {fileID: 0}
   - m_Name: IsClimbing
     m_Type: 4
     m_DefaultFloat: 0
@@ -308,7 +305,6 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 1
     m_Controller: {fileID: 0}
->>>>>>> 7155ff9ee8346c5afd36f4778a1219f1ed24fae5
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
