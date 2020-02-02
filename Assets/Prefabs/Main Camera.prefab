@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerlessAudio: {fileID: 8300000, guid: 60accc56da3e8974f990383b0efde766, type: 3}
-  canJumpAudio: {fileID: 8300000, guid: 3f624438d3f5d7848a74ee84d27176fa, type: 3}
-  canLoadAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
-  canClimbAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
-  canPhaseAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
+  canJumpAudio: {fileID: 8300000, guid: 002116323e4d0bb439c6d888249d1801, type: 3}
+  canLoadAudio: {fileID: 8300000, guid: 3f624438d3f5d7848a74ee84d27176fa, type: 3}
+  canClimbAudio: {fileID: 8300000, guid: 3f624438d3f5d7848a74ee84d27176fa, type: 3}
+  canPhaseAudio: {fileID: 8300000, guid: 3f624438d3f5d7848a74ee84d27176fa, type: 3}
 --- !u!1 &6724688122422373961
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724688122422373961}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2911592, y: 3.8331966, z: -10}
+  m_LocalPosition: {x: -3, y: 5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3871412393553873800}
@@ -202,11 +202,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
-  orthographic size: 8
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
