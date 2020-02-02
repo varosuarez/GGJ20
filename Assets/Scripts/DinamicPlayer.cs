@@ -146,6 +146,14 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
         animator.SetBool("IsClimbing", climbing2);
         */
+        if (phase)
+        {
+            GetComponent<SpriteRenderer>().color = new Color32(102, 140, 255, 200);
+        }
+        else
+        {
+            GetComponent<SpriteRenderer>().color = Color.white;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
