@@ -8,11 +8,11 @@ using UnityEngine.InputSystem;
 public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 {
     public enum State {
-        Powerless,
-        CanJump,
-        CanLoad,
-        CanClimb,
-        CanPhase
+        Powerless = 0,
+        CanJump = 1,
+        CanLoad = 2,
+        CanClimb = 3,
+        CanPhase = 4
     }
 
     [Autohook, SerializeField]
@@ -75,7 +75,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool jump;
     float horizontalMove = 0f, verticalMove = 0f;
     public Transform carryingPos;
-    private bool isCrawling => state <= State.Powerless;
+    private bool isCrawling => state == State.Powerless;
 
     private void OnEnable() => inputMaster.Enable();
 
