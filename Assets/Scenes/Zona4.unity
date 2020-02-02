@@ -19201,6 +19201,7 @@ MonoBehaviour:
     type: 3}
   isNotPressed: {fileID: -913810745074246122, guid: bbb4ee458fef4a04b9425acfb05df90f,
     type: 3}
+  m_doorSound: {fileID: 0}
 --- !u!4 &1771402547
 Transform:
   m_ObjectHideFlags: 0
