@@ -12,7 +12,7 @@ public class SreamVideo : MonoBehaviour
     public RawImage image;
     public VideoPlayer video;
     public AudioSource source;
-    private float timeleft = 16;
+    private float timeleft = 15.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class SreamVideo : MonoBehaviour
     IEnumerator PlayVideo()
     {
         video.Prepare();
-        WaitForSeconds waitForSeconds = new WaitForSeconds(1);
+        WaitForSeconds waitForSeconds = new WaitForSeconds(0.3f);
         while(!video.isPrepared)
         {
             yield return waitForSeconds;
