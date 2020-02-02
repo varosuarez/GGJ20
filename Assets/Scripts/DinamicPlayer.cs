@@ -75,6 +75,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool jump;
     float horizontalMove = 0f, verticalMove = 0f;
     public Transform carryingPos;
+    private bool isCrawling => state <= State.Powerless;
 
     private void OnEnable() => inputMaster.Enable();
 
@@ -86,7 +87,9 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         m_BackgroundAudio = GameObject.FindGameObjectWithTag("BackgroundSound");
         originalGravity = rb.gravityScale;
         availableCatch = false;
-        m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+        if (GameObject.FindGameObjectWithTag("UI") != null) {
+            m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+        }
     }
 
     public void OnHorizontal(InputAction.CallbackContext ctx) {
@@ -95,7 +98,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         horizontalMove = horizontalInput * runSpeed;
     }
 
-    public void OnVertical(InputAction.CallbackContext ctx) => verticalInput = ctx.ReadValue<float>();
+    public void OnVertical(InputAction.CallbackContext ctx) { }
 
     // Update is called once per frame	
     void Update()
@@ -161,6 +164,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             GetComponent<SpriteRenderer>().color = Color.white;
         }
+        animator.SetBool("IsCrawling", isCrawling);
     }
 
     private void OnTriggerEnter2D(Collider2D col) {

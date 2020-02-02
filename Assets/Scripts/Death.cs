@@ -7,6 +7,9 @@ public class Death : MonoBehaviour
 
     public AudioClip m_deathSound;
 
+    [SerializeField]
+    private Animator animator = default;
+
     private AudioSource m_audio;
 
     /// <summary>
@@ -40,6 +43,7 @@ public class Death : MonoBehaviour
 
         update = true;
         gameObject.GetComponent<CapsuleCollider2D>().enabled = false;
+        animator.SetTrigger("Death");
     }
 
     void Update()
@@ -68,6 +72,7 @@ public class Death : MonoBehaviour
             {
                 update = false;
                 gameObject.GetComponent<CapsuleCollider2D>().enabled = true;
+                animator.SetTrigger("Relocated");
             }
         }
     }
