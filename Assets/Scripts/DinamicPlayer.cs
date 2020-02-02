@@ -91,6 +91,11 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
+    public State GetState()
+    {
+        return state;
+    }
+
     [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
@@ -306,7 +311,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
         }
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (canJumpNotGrab && m_Grounded && jump)
         {
             // Add a vertical force to the player.
             m_Grounded = false;
