@@ -154,6 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_deathSound: {fileID: 8300000, guid: 5fb0020700092ac4b973f4897669e0bd, type: 3}
+  animator: {fileID: 4384855835710032067}
   animationTime: 1
 --- !u!95 &4384855835710032067
 Animator:
@@ -204,14 +205,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2323126747663810419}
   animator: {fileID: 4384855835710032067}
+  sprite: {fileID: 5420221905310820444}
   acceleration: 10
   maxSpeed: 10
   additionalDragClimbing: 6
   graceFrames: 5
-  groundColliders: 0
-  graceFramesRemaining: 0
   state: 4
-  carryingPos: {fileID: 2518364382849606226}
   m_JumpForce: 20000
   m_MovementSmoothing: 0.05
   m_AirControl: 0
@@ -221,6 +220,7 @@ MonoBehaviour:
   m_GroundCheck: {fileID: 1653768758730654912}
   k_GroundedRadius: 0.2
   runSpeed: 40
+  carryingPos: {fileID: 2518364382849606226}
 --- !u!82 &3934583902949856356
 AudioSource:
   m_ObjectHideFlags: 0
