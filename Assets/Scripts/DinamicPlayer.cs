@@ -48,6 +48,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     private GameObject m_BackgroundAudio;
 
+    private UIController m_canvas;
 
     [SerializeField]
     private State state = State.Powerless;
@@ -71,7 +72,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         m_BackgroundAudio = GameObject.FindGameObjectWithTag("BackgroundSound");
         originalGravity = rb.gravityScale;
         availableCatch = false;
-}
+        m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
+    }
 
     public void OnHorizontal(InputAction.CallbackContext ctx) => horizontalInput = ctx.ReadValue<float>();
 
@@ -161,6 +163,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             if (state == State.CanPhase)
             {
+                m_canvas.changeLeft();
                 phase = !phase;
             }
         }
@@ -172,6 +175,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         {
             if (state >= State.CanLoad)
             {
+                m_canvas.changeRight();
                 canJumpNotGrab = !canJumpNotGrab;
 
                 if (carrying && objectToCatch)
@@ -209,5 +213,23 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         return carrying;
     }
 
+    public void DiscoverUI(State state)
+    {
+        switch (state)
+        {
+            case State.CanJump:
+                m_canvas.discoverJump();
+                break;
+            case State.CanClimb:
+                m_canvas.discoverClimb();
+                break;
+            case State.CanLoad:
+                m_canvas.discoverGrab();
+                break;
+            case State.CanPhase:
+                m_canvas.discoverPhase();
+                break;
+        }
+    }
 
 }
