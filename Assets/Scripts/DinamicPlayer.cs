@@ -27,17 +27,12 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [SerializeField]
     private float maxSpeed = 10f;
     [SerializeField]
-    private float jumpStrength = 5;
-    [SerializeField]
-    private float minTimeBetweenJumps = 0.25f;
-    [SerializeField]
     private float additionalDragClimbing = 6;
     public int graceFrames = 5;
 
     private InputMaster inputMaster;
     private float horizontalInput;
     private float verticalInput;
-    private bool minTimeBetweenJumpsHasPassed = true;
     private int climbableColliders = 0;
     [HideInInspector]
     public int groundColliders = 0;
@@ -106,7 +101,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
     private Rigidbody2D m_Rigidbody2D;
-    private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
     private bool jump;
     public float runSpeed = 40f;
