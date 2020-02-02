@@ -16,7 +16,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     [Autohook, SerializeField]
-    private Rigidbody2D rb = default;
+    public Rigidbody2D rb = default;
 
     [Autohook, SerializeField]
     private Animator animator = default;
@@ -41,7 +41,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [HideInInspector]
     public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
-    private bool isGrounded => groundColliders > 0;
+    //private bool isGrounded => groundColliders > 0;
+    private bool isGrounded => (rb.velocity.y < 0.01f && rb.velocity.y > -0.01f) || groundColliders > 0;
     private float originalGravity;
     public int graceFramesRemaining = 0;
 
@@ -90,6 +91,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         animator.SetFloat("Horizontal", horizontalInput);
         if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
@@ -118,27 +120,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private void OnTriggerExit2D(Collider2D col) {
         if (col.CompareTag("Climbable")) {
             climbableColliders--;
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders++;
-            graceFramesRemaining = graceFrames;
-        }
-    }
-    
-
-    private void OnCollisionStay2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            graceFramesRemaining = graceFrames;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders--;
-            graceFramesRemaining = graceFrames;
         }
     }
 
