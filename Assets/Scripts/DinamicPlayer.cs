@@ -87,14 +87,14 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         m_canvas = GameObject.FindGameObjectWithTag("UI").GetComponent<UIController>();
     }
 
-    public void OnHorizontal(InputAction.CallbackContext ctx) {
-        horizontalInput = ctx.ReadValue<float>();
-        horizontalMove = horizontalInput * runSpeed;
-    }
+    public void OnHorizontal(InputAction.CallbackContext ctx) => horizontalInput = ctx.ReadValue<float>();	
+    public void OnVertical(InputAction.CallbackContext ctx) => verticalInput = ctx.ReadValue<float>();
 
-    public void OnVertical(InputAction.CallbackContext ctx) {
-        verticalInput = ctx.ReadValue<float>();
-        verticalMove = horizontalInput * runSpeed;
+    // Update is called once per frame	
+    void Update()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
     }
 
     public void SetState(State newState) {
