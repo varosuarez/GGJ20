@@ -16,7 +16,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     [Autohook, SerializeField]
-    private Rigidbody2D rb = default;
+    public Rigidbody2D rb = default;
 
     [Autohook, SerializeField]
     private Animator animator = default;
@@ -41,7 +41,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [HideInInspector]
     public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
-    private bool isGrounded => groundColliders > 0;
+    //private bool isGrounded => groundColliders > 0;
+    private bool isGrounded => (rb.velocity.y < 0.01f && rb.velocity.y > -0.01f) || groundColliders > 0;
     private float originalGravity;
     public int graceFramesRemaining = 0;
 

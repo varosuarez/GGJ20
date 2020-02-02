@@ -9,6 +9,7 @@ public class GroundChecker : MonoBehaviour
         if (col.CompareTag("Floor")) {
             player.groundColliders++;
             player.graceFramesRemaining = player.graceFrames;
+            player.rb.velocity = new Vector2(player.rb.velocity.x, 0);
         }
     }
 
