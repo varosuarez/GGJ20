@@ -110,17 +110,13 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private Vector3 m_Velocity = Vector3.zero;
     private bool jump;
     public float runSpeed = 40f;
-    float horizontalMove = 0f;
+    float horizontalMove = 0f, verticalMove = 0f;
 
     // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            jump = true;
-        }
+        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
     }
 
 
@@ -141,10 +137,11 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             }
         }
 
-        Move(horizontalMove * Time.fixedDeltaTime, jump);
+        Move(horizontalMove * Time.fixedDeltaTime, verticalMove * Time.fixedDeltaTime, jump);
         jump = false;
-
-        if (climbing && state >= State.CanClimb) {
+        /*
+        bool climbing2 = climbing && !phase;
+        if (climbing2 && state >= State.CanClimb) {
             rb.gravityScale = 0;
             rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed) + additionalDragClimbing;
             rb.AddForce(Vector2.up * verticalInput * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
@@ -156,7 +153,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         if (graceFramesRemaining > 0) {
             graceFramesRemaining--;
         }
-        animator.SetBool("IsClimbing", climbing);
+        animator.SetBool("IsClimbing", climbing2);
+        */
     }
 
     private void OnTriggerEnter2D(Collider2D col) {
@@ -277,8 +275,32 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    public void Move(float move, bool jump)
+    public void Move(float move, float moveV, bool jump)
     {
+        bool climbing2 = climbing && !phase;
+
+        if (climbing2 && state >= State.CanClimb)
+        {
+            // Move the character by finding the target velocity
+            Vector3 targetVelocity = new Vector2(m_Rigidbody2D.velocity.x, moveV * 10f);
+            // And then smoothing it out and applying it to the character
+            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+            
+            rb.gravityScale = 0;
+            rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed) + additionalDragClimbing;
+            rb.AddForce(Vector2.up * verticalInput * acceleration * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        }
+        else
+        {
+            rb.gravityScale = originalGravity;
+            rb.drag = rb.DragRequiredFromImpulse(acceleration, maxSpeed);
+        }
+        if (graceFramesRemaining > 0)
+        {
+            graceFramesRemaining--;
+        }     
+        
+        animator.SetBool("IsClimbing", climbing2);
 
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -287,19 +309,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
             Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
             // And then smoothing it out and applying it to the character
             m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
-
-            // If the input is moving the player right and the player is facing left...
-            if (move > 0 && !m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
-            // Otherwise if the input is moving the player left and the player is facing right...
-            else if (move < 0 && m_FacingRight)
-            {
-                // ... flip the player.
-                Flip();
-            }
         }
         // If the player should jump...
         if (m_Grounded && jump)
@@ -311,18 +320,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
 
-    private void Flip()
-    {
-        // Switch the way the player is labelled as facing.
-        m_FacingRight = !m_FacingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
-    }
-
     public void OnJump(InputAction.CallbackContext context)
     {
+        jump = true;
     }
 }
