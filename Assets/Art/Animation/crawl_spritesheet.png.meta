@@ -86,6 +86,78 @@ TextureImporter:
   - first:
       213: -5926229731208768399
     second: crawl_spritesheet_27
+  - first:
+      213: 4189618459160429873
+    second: crawl_spritesheet_28
+  - first:
+      213: 7470604210297026270
+    second: crawl_spritesheet_29
+  - first:
+      213: -3385832735967585529
+    second: crawl_spritesheet_30
+  - first:
+      213: 8407089540228237023
+    second: crawl_spritesheet_31
+  - first:
+      213: -2922628656307344907
+    second: crawl_spritesheet_32
+  - first:
+      213: 4421274475234506233
+    second: crawl_spritesheet_33
+  - first:
+      213: -790738919874778219
+    second: crawl_spritesheet_34
+  - first:
+      213: -2479718135492047198
+    second: crawl_spritesheet_35
+  - first:
+      213: 4071437817453433645
+    second: crawl_spritesheet_36
+  - first:
+      213: -2451789000010683209
+    second: crawl_spritesheet_37
+  - first:
+      213: -6678861693422847776
+    second: crawl_spritesheet_38
+  - first:
+      213: 8222931223178053017
+    second: crawl_spritesheet_39
+  - first:
+      213: -6177449536783302593
+    second: crawl_spritesheet_40
+  - first:
+      213: -1448313173378950875
+    second: crawl_spritesheet_41
+  - first:
+      213: -2559942941529544366
+    second: crawl_spritesheet_42
+  - first:
+      213: 4770440106061119630
+    second: crawl_spritesheet_43
+  - first:
+      213: -5398237547581980910
+    second: crawl_spritesheet_44
+  - first:
+      213: -2132577732564369369
+    second: crawl_spritesheet_45
+  - first:
+      213: -2161000130548587023
+    second: crawl_spritesheet_46
+  - first:
+      213: 5737651146767332488
+    second: crawl_spritesheet_47
+  - first:
+      213: -2262732505716327980
+    second: crawl_spritesheet_48
+  - first:
+      213: 7894723419259853609
+    second: crawl_spritesheet_49
+  - first:
+      213: -3215471867158873872
+    second: crawl_spritesheet_50
+  - first:
+      213: -3070823614224357854
+    second: crawl_spritesheet_51
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -147,7 +219,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -159,7 +231,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
