@@ -71,9 +71,15 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     }
 
-    public void OnHorizontal(InputAction.CallbackContext ctx) => horizontalInput = ctx.ReadValue<float>();
+    public void OnHorizontal(InputAction.CallbackContext ctx) {
+        horizontalInput = ctx.ReadValue<float>();
+        horizontalMove = horizontalInput * runSpeed;
+    }
 
-    public void OnVertical(InputAction.CallbackContext ctx) => verticalInput = ctx.ReadValue<float>();
+    public void OnVertical(InputAction.CallbackContext ctx) {
+        verticalInput = ctx.ReadValue<float>();
+        verticalMove = horizontalInput * runSpeed;
+    }
 
     public void SetState(State newState) {
         state = newState;
@@ -82,36 +88,40 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    public State GetState()
-    {
-        return state;
-    }
+    public State GetState() => state;
 
-    [SerializeField] private float m_JumpForce = 400f;                          // Amount of force added when the player jumps.
+    [Header("Movement")]
+    [Tooltip("Amount of force added when the player jumps.")]
+    [SerializeField]
+    private float m_JumpForce = 400f;
+    [Tooltip("How much to smooth out the movement")]
+    [Range(0, .3f)]
+    [SerializeField]
+    private float m_MovementSmoothing = .05f;
+    [Tooltip("Whether or not a player can steer while jumping")]
+    [SerializeField]
+    private bool m_AirControl = false;
+    [Tooltip("A mask determining what is ground to the character")]
+    [SerializeField]
+    private LayerMask m_WhatIsGround;
+    [Tooltip("A position marking where to check if the player is grounded")]
+    [SerializeField]
+    private Transform m_GroundCheck;
+    [SerializeField]
+    [Tooltip("Radius of the overlap circle to determine if grounded")]
+    private float k_GroundedRadius = .2f;
+    [SerializeField]
+    private float runSpeed = 40f;
 
-    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;  // How much to smooth out the movement
-    [SerializeField] private bool m_AirControl = false;                         // Whether or not a player can steer while jumping;
-    [SerializeField] private LayerMask m_WhatIsGround;                          // A mask determining what is ground to the character
-    [SerializeField] private Transform m_GroundCheck;                           // A position marking where to check if the player is grounded.
-
-    const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-    private bool m_Grounded;            // Whether or not the player is grounded.
+    private bool m_Grounded;
     private Rigidbody2D m_Rigidbody2D;
     private Vector3 m_Velocity = Vector3.zero;
     private bool jump;
-    public float runSpeed = 40f;
     float horizontalMove = 0f, verticalMove = 0f;
-
-    // Update is called once per frame
-    void Update()
-    {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-        verticalMove = Input.GetAxisRaw("Vertical") * runSpeed;
-    }
 
     private void OnDrawGizmos() {
         Gizmos.color = Color.red;
-        Gizmos.DrawSphere(m_GroundCheck.position, k_GroundedRadius);
+        Gizmos.DrawWireSphere(m_GroundCheck.position, k_GroundedRadius);
     }
 
     private void FixedUpdate() {
@@ -121,10 +131,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
         Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-        for (int i = 0; i < colliders.Length; i++)
-        {
-            if (colliders[i].gameObject != gameObject)
-            {
+        foreach (var col in colliders) {
+            if (col.gameObject != gameObject) {
                 m_Grounded = true;
                 break;
             }
