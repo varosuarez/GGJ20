@@ -26,8 +26,30 @@ public class UIController : MonoBehaviour
     public Image leftActive;
     public Image leftDeactivate;
 
-
-
+    public void Awake()
+    {
+        switch (GameObject.FindGameObjectWithTag("Player").GetComponent<DinamicPlayer>().GetState())
+        {
+            case DinamicPlayer.State.CanPhase:
+                discoverPhase();
+                discoverClimb();
+                discoverGrab();
+                discoverJump();
+                break;
+            case DinamicPlayer.State.CanClimb:
+                discoverClimb();
+                discoverGrab();
+                discoverJump();
+                break;
+            case DinamicPlayer.State.CanLoad:
+                discoverGrab();
+                discoverJump();
+                break;
+            case DinamicPlayer.State.CanJump:
+                discoverJump();
+                break;
+        }
+    }
 
     public void changeRight()
     {
