@@ -16,7 +16,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     }
 
     [Autohook, SerializeField]
-    private Rigidbody2D rb = default;
+    public Rigidbody2D rb = default;
 
     [Autohook, SerializeField]
     private Animator animator = default;
@@ -41,7 +41,8 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     [HideInInspector]
     public int groundColliders = 0;
     private bool climbing => climbableColliders > 0;
-    private bool isGrounded => groundColliders > 0;
+    //private bool isGrounded => groundColliders > 0;
+    private bool isGrounded => (rb.velocity.y < 0.01f && rb.velocity.y > -0.01f) || groundColliders > 0;
     private float originalGravity;
     public int graceFramesRemaining = 0;
 
@@ -60,7 +61,6 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
     private bool canJumpNotGrab = true;
     private bool carrying = false;
     private GameObject objectToCatch;
-    private GameObject objectGrabed;
     private bool availableCatch;
 
     public Transform carryingPos;
@@ -91,6 +91,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         animator.SetFloat("Horizontal", horizontalInput);
         if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
             this.RunAfter(minTimeBetweenJumps, () => minTimeBetweenJumpsHasPassed = true);
@@ -122,56 +123,32 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders++;
-            graceFramesRemaining = graceFrames;
-        }
-    }
-    
-
-    private void OnCollisionStay2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            graceFramesRemaining = graceFrames;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D col) {
-        if (col.collider.CompareTag("Floor") && col.otherCollider.CompareTag("Feet")) {
-            groundColliders--;
-            graceFramesRemaining = graceFrames;
-        }
-    }
-
     public void OnCatch(InputAction.CallbackContext context)
     {
-        if (!canJumpNotGrab)
+        if (context.performed)
         {
-            if (carrying)
+            if (!canJumpNotGrab)
             {
-                if (objectGrabed == null)
+                if (carrying)
                 {
+                    //DROP
+                    objectToCatch.transform.SetParent(null);
+                    objectToCatch.AddComponent<Rigidbody2D>();
+
                     carrying = false;
                 }
-
-                //DROP
-                objectGrabed.transform.SetParent(null);
-                objectGrabed.AddComponent<Rigidbody2D>();
-                
-                carrying = false;
-                objectGrabed = null;
-            }
-            else
-            {
-                //GRAB
-                if (availableCatch && objectToCatch != null)
+                else
                 {
-                    objectGrabed = objectToCatch;
-                    objectGrabed.transform.SetParent(carryingPos);
-                    objectGrabed.transform.position = new Vector3(0, 0, 1);
-                    objectToCatch.transform.localPosition = new Vector3(0, 0, 1);
-                    Destroy(objectGrabed.GetComponent<Rigidbody2D>());
-                    carrying = true;
+                    //GRAB
+                    if (availableCatch && objectToCatch != null)
+                    {
+                        objectToCatch = objectToCatch;
+                        objectToCatch.transform.SetParent(carryingPos);
+                        objectToCatch.transform.position = new Vector3(0, 0, 1);
+                        objectToCatch.transform.localPosition = new Vector3(0, 0, 1);
+                        Destroy(objectToCatch.GetComponent<Rigidbody2D>());
+                        carrying = true;
+                    }
                 }
             }
         }
@@ -180,24 +157,30 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
 
     public void OnLeftPhase(InputAction.CallbackContext context)
     {
-        if (state == State.CanPhase)
+        if (context.performed)
         {
-            phase = !phase;
+            if (state == State.CanPhase)
+            {
+                phase = !phase;
+            }
         }
     }
 
     public void OnRightPhase(InputAction.CallbackContext context)
     {
-        if (state >= State.CanLoad)
+        if (context.performed)
         {
-            canJumpNotGrab = !canJumpNotGrab;
-
-            if (carrying && objectToCatch)
+            if (state >= State.CanLoad)
             {
-                //DROP
-                objectToCatch.transform.SetParent(null);
-                objectToCatch.AddComponent<Rigidbody2D>();
-                carrying = false;
+                canJumpNotGrab = !canJumpNotGrab;
+
+                if (carrying && objectToCatch)
+                {
+                    //DROP
+                    objectToCatch.transform.SetParent(null);
+                    objectToCatch.AddComponent<Rigidbody2D>();
+                    carrying = false;
+                }
             }
         }
 
