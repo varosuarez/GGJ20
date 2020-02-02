@@ -1,0 +1,895 @@
+fileFormatVersion: 2
+guid: a066d2bdd4db708488da59e0ca79cead
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3025343930150294034
+    second: blue_jump_spritesheet_0
+  - first:
+      213: 4906620248693822982
+    second: blue_jump_spritesheet_1
+  - first:
+      213: 6761648871049194462
+    second: blue_jump_spritesheet_2
+  - first:
+      213: -3304636652477521322
+    second: blue_jump_spritesheet_3
+  - first:
+      213: -8616686456537723128
+    second: blue_jump_spritesheet_4
+  - first:
+      213: 283186443775957858
+    second: blue_jump_spritesheet_5
+  - first:
+      213: 8552655981352833664
+    second: blue_jump_spritesheet_6
+  - first:
+      213: 5682610985802111895
+    second: blue_jump_spritesheet_7
+  - first:
+      213: -5536327928730638368
+    second: blue_jump_spritesheet_8
+  - first:
+      213: -5605438202479232081
+    second: blue_jump_spritesheet_9
+  - first:
+      213: 379963556049107647
+    second: blue_jump_spritesheet_10
+  - first:
+      213: -6419349111303165325
+    second: blue_jump_spritesheet_11
+  - first:
+      213: 4809240151429434376
+    second: blue_jump_spritesheet_12
+  - first:
+      213: -6173937697196235450
+    second: blue_jump_spritesheet_13
+  - first:
+      213: -4414789150862316144
+    second: blue_jump_spritesheet_14
+  - first:
+      213: 3349046030621507956
+    second: blue_jump_spritesheet_15
+  - first:
+      213: -5475107415270026958
+    second: blue_jump_spritesheet_16
+  - first:
+      213: 428570973760834587
+    second: blue_jump_spritesheet_17
+  - first:
+      213: 2209147820017654964
+    second: blue_jump_spritesheet_18
+  - first:
+      213: 8649827024905410167
+    second: blue_jump_spritesheet_19
+  - first:
+      213: 700162690352210501
+    second: blue_jump_spritesheet_20
+  - first:
+      213: -7005405397424496588
+    second: blue_jump_spritesheet_21
+  - first:
+      213: 2558132721821665118
+    second: blue_jump_spritesheet_22
+  - first:
+      213: 4210606667209211769
+    second: blue_jump_spritesheet_23
+  - first:
+      213: 7228728998666511792
+    second: blue_jump_spritesheet_24
+  - first:
+      213: -5369320323009971023
+    second: blue_jump_spritesheet_25
+  - first:
+      213: -1181679546672309569
+    second: blue_jump_spritesheet_26
+  - first:
+      213: 7809250993198726733
+    second: blue_jump_spritesheet_27
+  - first:
+      213: -3814235163166944039
+    second: blue_jump_spritesheet_28
+  - first:
+      213: -9094207528104772161
+    second: blue_jump_spritesheet_29
+  - first:
+      213: -2065465395598829205
+    second: blue_jump_spritesheet_30
+  - first:
+      213: 2312560392749512915
+    second: blue_jump_spritesheet_31
+  - first:
+      213: -5204124104451426426
+    second: blue_jump_spritesheet_32
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eede10879b1d306d0800000000000000
+      internalID: -3025343930150294034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 606522bae11d71440800000000000000
+      internalID: 4906620248693822982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbeecec2d336dd50800000000000000
+      internalID: 6761648871049194462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652675929729322d0800000000000000
+      internalID: -3304636652477521322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f462922516b6880800000000000000
+      internalID: -8616686456537723128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26bd87af1941ee300800000000000000
+      internalID: 283186443775957858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 082d7a61d4321b670800000000000000
+      internalID: 8552655981352833664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b97757590bcde40800000000000000
+      internalID: 5682610985802111895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 3768
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e7afefd4130b23b0800000000000000
+      internalID: -5536327928730638368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab32da57ab7532b0800000000000000
+      internalID: -5605438202479232081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbab6e157d6e54500800000000000000
+      internalID: 379963556049107647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a2e839ef3e9e6a0800000000000000
+      internalID: -6419349111303165325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c4f71ff6addb240800000000000000
+      internalID: 4809240151429434376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645a9351064c15aa0800000000000000
+      internalID: -6173937697196235450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d6a9868a48bb2c0800000000000000
+      internalID: -4414789150862316144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47180afee933a7e20800000000000000
+      internalID: 3349046030621507956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23119bd60d28404b0800000000000000
+      internalID: -5475107415270026958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 2512
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1cce0ca70792f500800000000000000
+      internalID: 428570973760834587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc1b7cdc3878ae10800000000000000
+      internalID: 2209147820017654964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7769f04b9db5a0870800000000000000
+      internalID: 8649827024905410167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 542ec6bd14a77b900800000000000000
+      internalID: 700162690352210501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 430a8e248ecc7ce90800000000000000
+      internalID: -7005405397424496588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e57cb7c2820508320800000000000000
+      internalID: 2558132721821665118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f75ef74741f6a30800000000000000
+      internalID: 4210606667209211769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 6144
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5251f89ba915460800000000000000
+      internalID: 7228728998666511792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 7168
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc74b53d975c75b0800000000000000
+      internalID: -5369320323009971023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 8192
+        y: 1256
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba904e86b4d99fe0800000000000000
+      internalID: -1181679546672309569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ef9733768006c60800000000000000
+      internalID: 7809250993198726733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d451a9e35d111bc0800000000000000
+      internalID: -3814235163166944039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdb1a5bf62eac180800000000000000
+      internalID: -9094207528104772161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69587f7a2ef553e0800000000000000
+      internalID: -2065465395598829205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d8f87bbc6dd71020800000000000000
+      internalID: 2312560392749512915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: blue_jump_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 5120
+        y: 0
+        width: 1024
+        height: 1256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687ff1b13bc37c7b0800000000000000
+      internalID: -5204124104451426426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

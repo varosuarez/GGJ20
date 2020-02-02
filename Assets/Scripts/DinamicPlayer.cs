@@ -90,7 +90,7 @@ public class DinamicPlayer : MonoBehaviour, InputMaster.IPlayerActions
         Vector2 horizontalDestination = new Vector2(horizontalInput * acceleration * Time.fixedDeltaTime, 0);
         rb.AddForce(horizontalDestination, ForceMode2D.Impulse);
         animator.SetFloat("Horizontal", horizontalInput);
-        if (inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
+        if (canJumpNotGrab && inputMaster.Player.Jump.triggered && minTimeBetweenJumpsHasPassed && state >= State.CanJump && (isGrounded || climbing || graceFramesRemaining > 0)) {
             rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(Vector2.up * jumpStrength, ForceMode2D.Impulse);
             minTimeBetweenJumpsHasPassed = false;
